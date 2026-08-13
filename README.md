@@ -2,19 +2,19 @@
 
 Every predictor SignalDeck tracks, rendered verbatim from [`accuracy_registry.json`](accuracy_registry.json) on every publish — FAILED and INSUFFICIENT verdicts included, nothing filtered. A deliberately unflattering public record is the point: it cannot be fabricated overnight, and the commit history of this repo makes later retouching of the past record evident.
 
-- Generated: 2026-08-12T18:28:51
+- Generated: 2026-08-12T19:23:13
 - Minimum independent n for a verdict: 30
 - Survivorship epoch: 2026-07-24
 - Null policy: prequential-majority only: each day's constant guess is the majority class over days strictly before it. The hindsight null was retired after the dual-null transition cycle; the switchover regrade recorded zero verdict changes (audits/2026-07-27-null-transition.md).
 
 | Predictor | Family | Band | n | Accuracy | 95% CI | Prequential null | Verdict | Note |
 |---|---|---|--:|--:|---|--:|---|---|
-| directional-ensemble (1d) | direction | all | 2399 | 41.5% | [0.336, 0.499] | 55.3% | FAILED — significantly worse than the naive baseline | live forward record; independent symbol-days, day-resampled interval |
-| prequential-majority (1d) | benchmark | all | 2067 | 57.4% | [0.404, 0.728] | 55.0% | NO SKILL — indistinguishable from baseline | live-committed running-majority benchmark; graded under the identical dedup/survivorship rules as the ensemble |
-| directional-ensemble (1w) | direction | all | 3186 | 37.9% | [0.303, 0.462] | 63.5% | FAILED — significantly worse than the naive baseline | live forward record; independent symbol-days, day-resampled interval |
-| prequential-majority (1w) | benchmark | all | 2515 | 66.4% | withheld | 65.3% | INSUFFICIENT DAYS (8/10 distinct days) — no interval, so no verdict | live-committed running-majority benchmark; graded under the identical dedup/survivorship rules as the ensemble |
-| directional-ensemble (1d, high conviction) | direction | \|p-0.5\|>=0.15 | 452 | 44.7% | withheld | 46.6% | INSUFFICIENT DAYS (8/10 distinct days) — no interval, so no verdict | the tier a user would actually trade |
-| directional-ensemble (1w, high conviction) | direction | \|p-0.5\|>=0.15 | 507 | 39.1% | [0.293, 0.498] | 64.4% | FAILED — significantly worse than the naive baseline | the tier a user would actually trade |
+| directional-ensemble (1d) | direction | all | 2380 | 42.9% | [0.331, 0.534] | 56.9% | FAILED — significantly worse than the naive baseline | live forward record; independent symbol-days, day-resampled interval |
+| prequential-majority (1d) | benchmark | all | 2051 | 58.1% | [0.376, 0.761] | 55.7% | NO SKILL — indistinguishable from baseline | live-committed running-majority benchmark; graded under the identical dedup/survivorship rules as the ensemble |
+| directional-ensemble (1w) | direction | all | 2256 | 38.8% | [0.268, 0.525] | 62.6% | FAILED — significantly worse than the naive baseline | live forward record; independent symbol-days, day-resampled interval |
+| prequential-majority (1w) | benchmark | all | 1895 | 65.3% | withheld | 63.9% | INSUFFICIENT DAYS (9/10 distinct days) — no interval, so no verdict | live-committed running-majority benchmark; graded under the identical dedup/survivorship rules as the ensemble |
+| directional-ensemble (1d, high conviction) | direction | \|p-0.5\|>=0.15 | 454 | 45.2% | withheld | 48.6% | INSUFFICIENT DAYS (7/10 distinct days) — no interval, so no verdict | the tier a user would actually trade |
+| directional-ensemble (1w, high conviction) | direction | \|p-0.5\|>=0.15 | 344 | 34.9% | withheld | 62.9% | INSUFFICIENT DAYS (9/10 distinct days) — no interval, so no verdict | the tier a user would actually trade |
 | filingsdrift21 | structure | all | 0 | — | — | — | PENDING (first grade 2026-08-13, 0/30 resolved) | claim is backtested, not yet a live record |
 | liquidity21 | structure | all | 0 | — | — | — | PENDING (first grade 2026-08-14, 0/30 resolved) | claim is backtested, not yet a live record |
 | liquidity21-crypto | structure | all | 0 | — | — | — | PENDING (first grade 2026-08-14, 0/30 resolved) | claim is backtested, not yet a live record |
