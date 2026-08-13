@@ -2,16 +2,16 @@
 
 Every predictor SignalDeck tracks, rendered verbatim from [`accuracy_registry.json`](accuracy_registry.json) on every publish — FAILED and INSUFFICIENT verdicts included, nothing filtered. A deliberately unflattering public record is the point: it cannot be fabricated overnight, and the commit history of this repo makes later retouching of the past record evident.
 
-- Generated: 2026-08-12T19:23:13
+- Generated: 2026-08-12T20:15:53
 - Minimum independent n for a verdict: 30
 - Survivorship epoch: 2026-07-24
 - Null policy: prequential-majority only: each day's constant guess is the majority class over days strictly before it. The hindsight null was retired after the dual-null transition cycle; the switchover regrade recorded zero verdict changes (audits/2026-07-27-null-transition.md).
 
 | Predictor | Family | Band | n | Accuracy | 95% CI | Prequential null | Verdict | Note |
 |---|---|---|--:|--:|---|--:|---|---|
-| directional-ensemble (1d) | direction | all | 2380 | 42.9% | [0.331, 0.534] | 56.9% | FAILED — significantly worse than the naive baseline | live forward record; independent symbol-days, day-resampled interval |
-| prequential-majority (1d) | benchmark | all | 2051 | 58.1% | [0.376, 0.761] | 55.7% | NO SKILL — indistinguishable from baseline | live-committed running-majority benchmark; graded under the identical dedup/survivorship rules as the ensemble |
-| directional-ensemble (1w) | direction | all | 2256 | 38.8% | [0.268, 0.525] | 62.6% | FAILED — significantly worse than the naive baseline | live forward record; independent symbol-days, day-resampled interval |
+| directional-ensemble (1d) | direction | all | 2380 | 42.9% | [0.33, 0.535] | 56.9% | FAILED — significantly worse than the naive baseline | live forward record; independent symbol-days, day-resampled interval |
+| prequential-majority (1d) | benchmark | all | 2051 | 58.1% | [0.376, 0.762] | 55.7% | NO SKILL — indistinguishable from baseline | live-committed running-majority benchmark; graded under the identical dedup/survivorship rules as the ensemble |
+| directional-ensemble (1w) | direction | all | 2256 | 38.8% | [0.267, 0.525] | 62.6% | FAILED — significantly worse than the naive baseline | live forward record; independent symbol-days, day-resampled interval |
 | prequential-majority (1w) | benchmark | all | 1895 | 65.3% | withheld | 63.9% | INSUFFICIENT DAYS (9/10 distinct days) — no interval, so no verdict | live-committed running-majority benchmark; graded under the identical dedup/survivorship rules as the ensemble |
 | directional-ensemble (1d, high conviction) | direction | \|p-0.5\|>=0.15 | 454 | 45.2% | withheld | 48.6% | INSUFFICIENT DAYS (7/10 distinct days) — no interval, so no verdict | the tier a user would actually trade |
 | directional-ensemble (1w, high conviction) | direction | \|p-0.5\|>=0.15 | 344 | 34.9% | withheld | 62.9% | INSUFFICIENT DAYS (9/10 distinct days) — no interval, so no verdict | the tier a user would actually trade |

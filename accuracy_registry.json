@@ -1,14 +1,14 @@
 {
- "generated": "2026-08-12T19:23:13",
- "graded_at": "2026-08-12T19:23:13",
+ "generated": "2026-08-12T20:15:53",
+ "graded_at": "2026-08-12T20:15:53",
  "refused_since": null,
  "min_independent_n": 30,
  "max_alpha": 0.05,
  "family_size": 13,
- "looks": 23,
- "divisor": 299,
- "corrected_alpha": 0.00016722408026755855,
- "ci_z": 3.7639892426510775,
+ "looks": 24,
+ "divisor": 312,
+ "corrected_alpha": 0.00016025641025641026,
+ "ci_z": 3.7746127568013605,
  "multiplicity_rule": "Published intervals are Bonferroni-corrected for both multiplicities this surface pays: FAMILY (rows published in the same grading cycle) and LOOKS (grading cycles taken over the same accruing rows). divisor = family_size * looks; corrected_alpha = maxAlpha / divisor; z = probit(1 - corrected_alpha/2), floored at the uncorrected two-sided z so the correction can only ever WIDEN an interval, never narrow one. family_size is the number of rows the cycle actually publishes, measured from the rows themselves, then folded with max() against the largest family ever published on the grading-look chain and the family the last published registry JSON declared, so publishing fewer rows can never refund multiplicity a wider family already spent. looks is the monotone count of 'grading-look' records on the pre-registration chain, folded with max() over the record count, the counters those records carry, and the looks already published in the registry JSON, so neither log rotation nor a re-cut snapshot can refund a look already taken.",
  "survivorship_epoch": "2026-07-24",
  "survivorship_completeness": {
@@ -86,6 +86,36 @@
   "method": "a graded (symbol, horizon, trading-day) observation is dropped when that symbol's own feed was flagged stale on that trading day",
   "reason": null
  },
+ "thin_day_exclusion": {
+  "applied": true,
+  "min_day_observations": 30,
+  "by_horizon": {
+   "1d": {
+    "days_dropped": 5,
+    "days_kept": 9,
+    "rows_dropped": 36,
+    "rows_considered": 2380
+   },
+   "1d#pm": {
+    "days_dropped": 4,
+    "days_kept": 8,
+    "rows_dropped": 30,
+    "rows_considered": 2051
+   },
+   "1w": {
+    "days_dropped": 4,
+    "days_kept": 7,
+    "rows_dropped": 17,
+    "rows_considered": 2256
+   },
+   "1w#pm": {
+    "days_dropped": 3,
+    "days_kept": 6,
+    "rows_dropped": 12,
+    "rows_considered": 1895
+   }
+  }
+ },
  "null_policy": "prequential-majority only: each day's constant guess is the majority class over days strictly before it. The hindsight null was retired after the dual-null transition cycle; the switchover regrade recorded zero verdict changes (audits/2026-07-27-null-transition.md).",
  "min_distinct_blocks": 10,
  "auto_retire_rule": {
@@ -97,8 +127,8 @@
   "registered": "2026-07-26",
   "sha256": "353450b995a52bcea9257a8520369d8841e7fa71c70295aae925dc7cf03b429f"
  },
- "grader_sha256": "1e447de3692c3bcf4a08dde847a48e602fc55a6ad9c02be75aaa21987f910dc9",
- "grading_protocol_seq": 61,
+ "grader_sha256": "2f09864c2f9b1bab52a44b8136b59cd6eb09bafa64c1e7d54392b5385abec681",
+ "grading_protocol_seq": 64,
  "revision_epoch": "2026-08-04",
  "revision_gate_checked": true,
  "revision_gate_offenders": {
@@ -269,8 +299,8 @@
    "live_n": 2380,
    "live_acc": 0.4294117647058823,
    "ci": [
-    0.3305045849552042,
-    0.5342962380640638
+    0.3302451562931673,
+    0.5345880167537752
    ],
    "ci_method": "day-clustered-wilson",
    "distinct_days": 14,
@@ -280,8 +310,8 @@
    "null_acc": 0.5686974789915966,
    "null_method": "prequential-majority (walk-forward)",
    "null_ci": [
-    0.3874046544480151,
-    0.7332769439396051
+    0.38693368527045585,
+    0.7336649857737958
    ],
    "skill": -0.1392857142857143,
    "verdict": "FAILED \u2014 significantly worse than the naive baseline",
@@ -293,8 +323,8 @@
      "correct": 7,
      "accuracy": 0.5,
      "ci": [
-      0.14539623720340444,
-      0.8546037627965956
+      0.1448998544629544,
+      0.8551001455370456
      ]
     },
     "note": "DESCRIPTIVE, sets no verdict. mean_daily_agreement is the mean fraction of a day's calls pointing the same way; above ~0.8 the day is the honest unit and day_bet is the grade that framing supports. A high agreement with a large live_n means the row's evidence is the day count, not the row count."
@@ -306,10 +336,10 @@
    "settlement_filtered": true,
    "settlement_excluded": 16726,
    "family_size": 13,
-   "looks": 23,
-   "divisor": 299,
-   "corrected_alpha": 0.00016722408026755855,
-   "ci_z": 3.7639892426510775
+   "looks": 24,
+   "divisor": 312,
+   "corrected_alpha": 0.00016025641025641026,
+   "ci_z": 3.7746127568013605
   },
   {
    "predictor": "prequential-majority (1d)",
@@ -319,8 +349,8 @@
    "live_n": 2051,
    "live_acc": 0.5811799122379327,
    "ci": [
-    0.3764092079112884,
-    0.7613427724643451
+    0.37588776776946475,
+    0.7617462937688302
    ],
    "ci_method": "day-clustered-wilson",
    "distinct_days": 12,
@@ -330,8 +360,8 @@
    "null_acc": 0.5570453437347636,
    "null_method": "prequential-majority (walk-forward)",
    "null_ci": [
-    0.3320880634213217,
-    0.7608080306647353
+    0.3315459004685545,
+    0.761252744301579
    ],
    "skill": 0.024134568503169196,
    "verdict": "NO SKILL \u2014 indistinguishable from baseline",
@@ -343,8 +373,8 @@
      "correct": 5,
      "accuracy": 0.4166666666666667,
      "ci": [
-      0.09623007454941074,
-      0.8273395744780745
+      0.09586741408986893,
+      0.8279354376471579
      ]
     },
     "note": "DESCRIPTIVE, sets no verdict. mean_daily_agreement is the mean fraction of a day's calls pointing the same way; above ~0.8 the day is the honest unit and day_bet is the grade that framing supports. A high agreement with a large live_n means the row's evidence is the day count, not the row count."
@@ -356,10 +386,10 @@
    "settlement_filtered": true,
    "settlement_excluded": 16726,
    "family_size": 13,
-   "looks": 23,
-   "divisor": 299,
-   "corrected_alpha": 0.00016722408026755855,
-   "ci_z": 3.7639892426510775
+   "looks": 24,
+   "divisor": 312,
+   "corrected_alpha": 0.00016025641025641026,
+   "ci_z": 3.7746127568013605
   },
   {
    "predictor": "directional-ensemble (1w)",
@@ -369,8 +399,8 @@
    "live_n": 2256,
    "live_acc": 0.3882978723404255,
    "ci": [
-    0.26756224139069035,
-    0.524500555775282
+    0.2672642974869829,
+    0.5248798465123579
    ],
    "ci_method": "day-clustered-wilson",
    "distinct_days": 11,
@@ -380,8 +410,8 @@
    "null_acc": 0.625886524822695,
    "null_method": "prequential-majority (walk-forward)",
    "null_ci": [
-    0.49176863937083726,
-    0.7431008673382528
+    0.491391811347828,
+    0.7433885923021608
    ],
    "skill": -0.2375886524822695,
    "verdict": "FAILED \u2014 significantly worse than the naive baseline",
@@ -393,8 +423,8 @@
      "correct": 4,
      "accuracy": 0.36363636363636365,
      "ci": [
-      0.0714043737885045,
-      0.809394820026251
+      0.0711196341173414,
+      0.8100576681293412
      ]
     },
     "note": "DESCRIPTIVE, sets no verdict. mean_daily_agreement is the mean fraction of a day's calls pointing the same way; above ~0.8 the day is the honest unit and day_bet is the grade that framing supports. A high agreement with a large live_n means the row's evidence is the day count, not the row count."
@@ -406,10 +436,10 @@
    "settlement_filtered": true,
    "settlement_excluded": 16726,
    "family_size": 13,
-   "looks": 23,
-   "divisor": 299,
-   "corrected_alpha": 0.00016722408026755855,
-   "ci_z": 3.7639892426510775
+   "looks": 24,
+   "divisor": 312,
+   "corrected_alpha": 0.00016025641025641026,
+   "ci_z": 3.7746127568013605
   },
   {
    "predictor": "prequential-majority (1w)",
@@ -437,8 +467,8 @@
      "correct": 7,
      "accuracy": 0.7777777777777778,
      "ci": [
-      0.24109691826599372,
-      0.9747215851036504
+      0.24023787578893935,
+      0.974837150350057
      ]
     },
     "note": "DESCRIPTIVE, sets no verdict. mean_daily_agreement is the mean fraction of a day's calls pointing the same way; above ~0.8 the day is the honest unit and day_bet is the grade that framing supports. A high agreement with a large live_n means the row's evidence is the day count, not the row count."
@@ -450,10 +480,10 @@
    "settlement_filtered": true,
    "settlement_excluded": 16726,
    "family_size": 13,
-   "looks": 23,
-   "divisor": 299,
-   "corrected_alpha": 0.00016722408026755855,
-   "ci_z": 3.7639892426510775
+   "looks": 24,
+   "divisor": 312,
+   "corrected_alpha": 0.00016025641025641026,
+   "ci_z": 3.7746127568013605
   },
   {
    "predictor": "directional-ensemble (1d, high conviction)",
@@ -481,8 +511,8 @@
      "correct": 3,
      "accuracy": 0.42857142857142855,
      "ci": [
-      0.06870600929982279,
-      0.8840520128433342
+      0.06841038889789447,
+      0.8845256968380917
      ]
     },
     "note": "DESCRIPTIVE, sets no verdict. mean_daily_agreement is the mean fraction of a day's calls pointing the same way; above ~0.8 the day is the honest unit and day_bet is the grade that framing supports. A high agreement with a large live_n means the row's evidence is the day count, not the row count."
@@ -494,10 +524,10 @@
    "settlement_filtered": true,
    "settlement_excluded": 16726,
    "family_size": 13,
-   "looks": 23,
-   "divisor": 299,
-   "corrected_alpha": 0.00016722408026755855,
-   "ci_z": 3.7639892426510775
+   "looks": 24,
+   "divisor": 312,
+   "corrected_alpha": 0.00016025641025641026,
+   "ci_z": 3.7746127568013605
   },
   {
    "predictor": "directional-ensemble (1w, high conviction)",
@@ -525,8 +555,8 @@
      "correct": 1,
      "accuracy": 0.1111111111111111,
      "ci": [
-      0.0069414955574060855,
-      0.6909125997250921
+      0.006906830913559592,
+      0.6919881324918452
      ]
     },
     "note": "DESCRIPTIVE, sets no verdict. mean_daily_agreement is the mean fraction of a day's calls pointing the same way; above ~0.8 the day is the honest unit and day_bet is the grade that framing supports. A high agreement with a large live_n means the row's evidence is the day count, not the row count."
@@ -538,10 +568,10 @@
    "settlement_filtered": true,
    "settlement_excluded": 16726,
    "family_size": 13,
-   "looks": 23,
-   "divisor": 299,
-   "corrected_alpha": 0.00016722408026755855,
-   "ci_z": 3.7639892426510775
+   "looks": 24,
+   "divisor": 312,
+   "corrected_alpha": 0.00016025641025641026,
+   "ci_z": 3.7746127568013605
   },
   {
    "predictor": "filingsdrift21",
@@ -574,10 +604,10 @@
    "block_span": 0,
    "horizon_days": 21,
    "family_size": 13,
-   "looks": 23,
-   "divisor": 299,
-   "corrected_alpha": 0.00016722408026755855,
-   "ci_z": 3.7639892426510775
+   "looks": 24,
+   "divisor": 312,
+   "corrected_alpha": 0.00016025641025641026,
+   "ci_z": 3.7746127568013605
   },
   {
    "predictor": "liquidity21",
@@ -610,10 +640,10 @@
    "block_span": 0,
    "horizon_days": 21,
    "family_size": 13,
-   "looks": 23,
-   "divisor": 299,
-   "corrected_alpha": 0.00016722408026755855,
-   "ci_z": 3.7639892426510775
+   "looks": 24,
+   "divisor": 312,
+   "corrected_alpha": 0.00016025641025641026,
+   "ci_z": 3.7746127568013605
   },
   {
    "predictor": "liquidity21-crypto",
@@ -646,10 +676,10 @@
    "block_span": 0,
    "horizon_days": 21,
    "family_size": 13,
-   "looks": 23,
-   "divisor": 299,
-   "corrected_alpha": 0.00016722408026755855,
-   "ci_z": 3.7639892426510775
+   "looks": 24,
+   "divisor": 312,
+   "corrected_alpha": 0.00016025641025641026,
+   "ci_z": 3.7746127568013605
   },
   {
    "predictor": "trend21",
@@ -682,10 +712,10 @@
    "block_span": 0,
    "horizon_days": 21,
    "family_size": 13,
-   "looks": 23,
-   "divisor": 299,
-   "corrected_alpha": 0.00016722408026755855,
-   "ci_z": 3.7639892426510775
+   "looks": 24,
+   "divisor": 312,
+   "corrected_alpha": 0.00016025641025641026,
+   "ci_z": 3.7746127568013605
   },
   {
    "predictor": "trend21-crypto",
@@ -718,10 +748,10 @@
    "block_span": 0,
    "horizon_days": 21,
    "family_size": 13,
-   "looks": 23,
-   "divisor": 299,
-   "corrected_alpha": 0.00016722408026755855,
-   "ci_z": 3.7639892426510775
+   "looks": 24,
+   "divisor": 312,
+   "corrected_alpha": 0.00016025641025641026,
+   "ci_z": 3.7746127568013605
   },
   {
    "predictor": "trend63",
@@ -754,10 +784,10 @@
    "block_span": 0,
    "horizon_days": 63,
    "family_size": 13,
-   "looks": 23,
-   "divisor": 299,
-   "corrected_alpha": 0.00016722408026755855,
-   "ci_z": 3.7639892426510775
+   "looks": 24,
+   "divisor": 312,
+   "corrected_alpha": 0.00016025641025641026,
+   "ci_z": 3.7746127568013605
   },
   {
    "predictor": "vol21",
@@ -790,10 +820,10 @@
    "block_span": 0,
    "horizon_days": 21,
    "family_size": 13,
-   "looks": 23,
-   "divisor": 299,
-   "corrected_alpha": 0.00016722408026755855,
-   "ci_z": 3.7639892426510775
+   "looks": 24,
+   "divisor": 312,
+   "corrected_alpha": 0.00016025641025641026,
+   "ci_z": 3.7746127568013605
   }
  ],
  "survivorship_bound": {
