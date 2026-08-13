@@ -1,14 +1,14 @@
 {
- "generated": "2026-08-12T20:28:00",
- "graded_at": "2026-08-12T20:28:00",
+ "generated": "2026-08-12T20:48:19",
+ "graded_at": "2026-08-12T20:48:19",
  "refused_since": null,
  "min_independent_n": 30,
  "max_alpha": 0.05,
  "family_size": 13,
- "looks": 25,
- "divisor": 325,
- "corrected_alpha": 0.00015384615384615385,
- "ci_z": 3.784777506186272,
+ "looks": 26,
+ "divisor": 338,
+ "corrected_alpha": 0.00014792899408284024,
+ "ci_z": 3.7945206104734446,
  "multiplicity_rule": "Published intervals are Bonferroni-corrected for both multiplicities this surface pays: FAMILY (rows published in the same grading cycle) and LOOKS (grading cycles taken over the same accruing rows). divisor = family_size * looks; corrected_alpha = maxAlpha / divisor; z = probit(1 - corrected_alpha/2), floored at the uncorrected two-sided z so the correction can only ever WIDEN an interval, never narrow one. family_size is the number of rows the cycle actually publishes, measured from the rows themselves, then folded with max() against the largest family ever published on the grading-look chain and the family the last published registry JSON declared, so publishing fewer rows can never refund multiplicity a wider family already spent. looks is the monotone count of 'grading-look' records on the pre-registration chain, folded with max() over the record count, the counters those records carry, and the looks already published in the registry JSON, so neither log rotation nor a re-cut snapshot can refund a look already taken.",
  "survivorship_epoch": "2026-07-24",
  "survivorship_completeness": {
@@ -127,8 +127,8 @@
   "registered": "2026-07-26",
   "sha256": "353450b995a52bcea9257a8520369d8841e7fa71c70295aae925dc7cf03b429f"
  },
- "grader_sha256": "514813857b0717c1c0c2dcc4540b889c99ab36b0da69de78c329356e022d847b",
- "grading_protocol_seq": 66,
+ "grader_sha256": "cb3c01e91a04b8d85539a58f4efc965a20dcafde7ca57d9fd50c7e4ee5df628c",
+ "grading_protocol_seq": 69,
  "revision_epoch": "2026-08-04",
  "revision_gate_checked": true,
  "revision_gate_offenders": {
@@ -299,8 +299,8 @@
    "live_n": 2380,
    "live_acc": 0.4294117647058823,
    "ci": [
-    0.3299970570881529,
-    0.5348671397923644
+    0.32975936539068396,
+    0.535134633316325
    ],
    "ci_method": "day-clustered-wilson",
    "distinct_days": 14,
@@ -310,8 +310,8 @@
    "null_acc": 0.5686974789915966,
    "null_method": "prequential-majority (walk-forward)",
    "null_ci": [
-    0.38648340634961786,
-    0.7340358067342831
+    0.38605212928269483,
+    0.7343908198732023
    ],
    "skill": -0.1392857142857143,
    "verdict": "FAILED \u2014 significantly worse than the naive baseline",
@@ -323,8 +323,8 @@
      "correct": 7,
      "accuracy": 0.5,
      "ci": [
-      0.14442688236860446,
-      0.8555731176313955
+      0.14397533506478183,
+      0.8560246649352181
      ]
     },
     "note": "DESCRIPTIVE, sets no verdict. mean_daily_agreement is the mean fraction of a day's calls pointing the same way; above ~0.8 the day is the honest unit and day_bet is the grade that framing supports. A high agreement with a large live_n means the row's evidence is the day count, not the row count."
@@ -336,10 +336,10 @@
    "settlement_filtered": true,
    "settlement_excluded": 16726,
    "family_size": 13,
-   "looks": 25,
-   "divisor": 325,
-   "corrected_alpha": 0.00015384615384615385,
-   "ci_z": 3.784777506186272
+   "looks": 26,
+   "divisor": 338,
+   "corrected_alpha": 0.00014792899408284024,
+   "ci_z": 3.7945206104734446
   },
   {
    "predictor": "prequential-majority (1d)",
@@ -348,23 +348,17 @@
    "claimed": null,
    "live_n": 2051,
    "live_acc": 0.5811799122379327,
-   "ci": [
-    0.37538932839807815,
-    0.7621317849846306
-   ],
-   "ci_method": "day-clustered-wilson",
+   "ci": null,
+   "ci_method": "withheld",
    "distinct_days": 12,
-   "design_effect": 25.86095918215511,
-   "effective_n": 79.30873659996554,
+   "design_effect": null,
+   "effective_n": null,
    "null_prequential": 0.5570453437347636,
    "null_acc": 0.5570453437347636,
    "null_method": "prequential-majority (walk-forward)",
-   "null_ci": [
-    0.33102783722473517,
-    0.7616775013435132
-   ],
+   "null_ci": null,
    "skill": 0.024134568503169196,
-   "verdict": "NO SKILL \u2014 indistinguishable from baseline",
+   "verdict": "INSUFFICIENT DAYS (9/10 credible days of 12, 3 degenerate) \u2014 no interval, so no verdict",
    "retire": false,
    "breadth": {
     "mean_daily_agreement": 1.0,
@@ -373,8 +367,8 @@
      "correct": 5,
      "accuracy": 0.4166666666666667,
      "ci": [
-      0.09552208142903101,
-      0.828503183916607
+      0.09519259548264719,
+      0.8290451988375684
      ]
     },
     "note": "DESCRIPTIVE, sets no verdict. mean_daily_agreement is the mean fraction of a day's calls pointing the same way; above ~0.8 the day is the honest unit and day_bet is the grade that framing supports. A high agreement with a large live_n means the row's evidence is the day count, not the row count."
@@ -386,10 +380,10 @@
    "settlement_filtered": true,
    "settlement_excluded": 16726,
    "family_size": 13,
-   "looks": 25,
-   "divisor": 325,
-   "corrected_alpha": 0.00015384615384615385,
-   "ci_z": 3.784777506186272
+   "looks": 26,
+   "divisor": 338,
+   "corrected_alpha": 0.00014792899408284024,
+   "ci_z": 3.7945206104734446
   },
   {
    "predictor": "directional-ensemble (1w)",
@@ -398,24 +392,18 @@
    "claimed": null,
    "live_n": 2256,
    "live_acc": 0.3882978723404255,
-   "ci": [
-    0.2669794745755375,
-    0.5252426582105871
-   ],
-   "ci_method": "day-clustered-wilson",
+   "ci": null,
+   "ci_method": "withheld",
    "distinct_days": 11,
-   "design_effect": 11.844526662273648,
-   "effective_n": 190.46772102642583,
+   "design_effect": null,
+   "effective_n": null,
    "null_prequential": 0.625886524822695,
    "null_acc": 0.625886524822695,
    "null_method": "prequential-majority (walk-forward)",
-   "null_ci": [
-    0.49103133658713094,
-    0.743663640250798
-   ],
+   "null_ci": null,
    "skill": -0.2375886524822695,
-   "verdict": "FAILED \u2014 significantly worse than the naive baseline",
-   "retire": true,
+   "verdict": "INSUFFICIENT DAYS (7/10 credible days of 11, 4 degenerate) \u2014 no interval, so no verdict",
+   "retire": false,
    "breadth": {
     "mean_daily_agreement": 0.9496089531841373,
     "day_bet": {
@@ -423,8 +411,8 @@
      "correct": 4,
      "accuracy": 0.36363636363636365,
      "ci": [
-      0.07084860739388882,
-      0.810689224739443
+      0.07059011601506293,
+      0.8112921452573034
      ]
     },
     "note": "DESCRIPTIVE, sets no verdict. mean_daily_agreement is the mean fraction of a day's calls pointing the same way; above ~0.8 the day is the honest unit and day_bet is the grade that framing supports. A high agreement with a large live_n means the row's evidence is the day count, not the row count."
@@ -436,10 +424,10 @@
    "settlement_filtered": true,
    "settlement_excluded": 16726,
    "family_size": 13,
-   "looks": 25,
-   "divisor": 325,
-   "corrected_alpha": 0.00015384615384615385,
-   "ci_z": 3.784777506186272
+   "looks": 26,
+   "divisor": 338,
+   "corrected_alpha": 0.00014792899408284024,
+   "ci_z": 3.7945206104734446
   },
   {
    "predictor": "prequential-majority (1w)",
@@ -458,7 +446,7 @@
    "null_method": "prequential-majority (walk-forward)",
    "null_ci": null,
    "skill": 0.014248021108179354,
-   "verdict": "INSUFFICIENT DAYS (9/10 distinct days) \u2014 no interval, so no verdict",
+   "verdict": "INSUFFICIENT DAYS (6/10 credible days of 9, 3 degenerate) \u2014 no interval, so no verdict",
    "retire": false,
    "breadth": {
     "mean_daily_agreement": 1.0,
@@ -467,8 +455,8 @@
      "correct": 7,
      "accuracy": 0.7777777777777778,
      "ci": [
-      0.2394194599868087,
-      0.974947032756539
+      0.2386382202708991,
+      0.9750517264740516
      ]
     },
     "note": "DESCRIPTIVE, sets no verdict. mean_daily_agreement is the mean fraction of a day's calls pointing the same way; above ~0.8 the day is the honest unit and day_bet is the grade that framing supports. A high agreement with a large live_n means the row's evidence is the day count, not the row count."
@@ -480,10 +468,10 @@
    "settlement_filtered": true,
    "settlement_excluded": 16726,
    "family_size": 13,
-   "looks": 25,
-   "divisor": 325,
-   "corrected_alpha": 0.00015384615384615385,
-   "ci_z": 3.784777506186272
+   "looks": 26,
+   "divisor": 338,
+   "corrected_alpha": 0.00014792899408284024,
+   "ci_z": 3.7945206104734446
   },
   {
    "predictor": "directional-ensemble (1d, high conviction)",
@@ -502,7 +490,7 @@
    "null_method": "prequential-majority (walk-forward)",
    "null_ci": null,
    "skill": -0.03414096916299558,
-   "verdict": "INSUFFICIENT DAYS (7/10 distinct days) \u2014 no interval, so no verdict",
+   "verdict": "INSUFFICIENT DAYS (5/10 credible days of 7, 2 degenerate) \u2014 no interval, so no verdict",
    "retire": false,
    "breadth": {
     "mean_daily_agreement": 0.8830505382229521,
@@ -511,8 +499,8 @@
      "correct": 3,
      "accuracy": 0.42857142857142855,
      "ci": [
-      0.06812916055181623,
-      0.8849765118880661
+      0.06786108040534627,
+      0.885406424489557
      ]
     },
     "note": "DESCRIPTIVE, sets no verdict. mean_daily_agreement is the mean fraction of a day's calls pointing the same way; above ~0.8 the day is the honest unit and day_bet is the grade that framing supports. A high agreement with a large live_n means the row's evidence is the day count, not the row count."
@@ -524,10 +512,10 @@
    "settlement_filtered": true,
    "settlement_excluded": 16726,
    "family_size": 13,
-   "looks": 25,
-   "divisor": 325,
-   "corrected_alpha": 0.00015384615384615385,
-   "ci_z": 3.784777506186272
+   "looks": 26,
+   "divisor": 338,
+   "corrected_alpha": 0.00014792899408284024,
+   "ci_z": 3.7945206104734446
   },
   {
    "predictor": "directional-ensemble (1w, high conviction)",
@@ -546,7 +534,7 @@
    "null_method": "prequential-majority (walk-forward)",
    "null_ci": null,
    "skill": -0.2805232558139535,
-   "verdict": "INSUFFICIENT DAYS (9/10 distinct days) \u2014 no interval, so no verdict",
+   "verdict": "INSUFFICIENT DAYS (9/10 credible days of 9) \u2014 no interval, so no verdict",
    "retire": false,
    "breadth": {
     "mean_daily_agreement": 0.9533011272141708,
@@ -555,8 +543,8 @@
      "correct": 1,
      "accuracy": 0.1111111111111111,
      "ci": [
-      0.006873896659871148,
-      0.6930130134994418
+      0.006842540943540698,
+      0.6939915336135285
      ]
     },
     "note": "DESCRIPTIVE, sets no verdict. mean_daily_agreement is the mean fraction of a day's calls pointing the same way; above ~0.8 the day is the honest unit and day_bet is the grade that framing supports. A high agreement with a large live_n means the row's evidence is the day count, not the row count."
@@ -568,10 +556,10 @@
    "settlement_filtered": true,
    "settlement_excluded": 16726,
    "family_size": 13,
-   "looks": 25,
-   "divisor": 325,
-   "corrected_alpha": 0.00015384615384615385,
-   "ci_z": 3.784777506186272
+   "looks": 26,
+   "divisor": 338,
+   "corrected_alpha": 0.00014792899408284024,
+   "ci_z": 3.7945206104734446
   },
   {
    "predictor": "filingsdrift21",
@@ -604,10 +592,10 @@
    "block_span": 0,
    "horizon_days": 21,
    "family_size": 13,
-   "looks": 25,
-   "divisor": 325,
-   "corrected_alpha": 0.00015384615384615385,
-   "ci_z": 3.784777506186272
+   "looks": 26,
+   "divisor": 338,
+   "corrected_alpha": 0.00014792899408284024,
+   "ci_z": 3.7945206104734446
   },
   {
    "predictor": "liquidity21",
@@ -640,10 +628,10 @@
    "block_span": 0,
    "horizon_days": 21,
    "family_size": 13,
-   "looks": 25,
-   "divisor": 325,
-   "corrected_alpha": 0.00015384615384615385,
-   "ci_z": 3.784777506186272
+   "looks": 26,
+   "divisor": 338,
+   "corrected_alpha": 0.00014792899408284024,
+   "ci_z": 3.7945206104734446
   },
   {
    "predictor": "liquidity21-crypto",
@@ -676,10 +664,10 @@
    "block_span": 0,
    "horizon_days": 21,
    "family_size": 13,
-   "looks": 25,
-   "divisor": 325,
-   "corrected_alpha": 0.00015384615384615385,
-   "ci_z": 3.784777506186272
+   "looks": 26,
+   "divisor": 338,
+   "corrected_alpha": 0.00014792899408284024,
+   "ci_z": 3.7945206104734446
   },
   {
    "predictor": "trend21",
@@ -712,10 +700,10 @@
    "block_span": 0,
    "horizon_days": 21,
    "family_size": 13,
-   "looks": 25,
-   "divisor": 325,
-   "corrected_alpha": 0.00015384615384615385,
-   "ci_z": 3.784777506186272
+   "looks": 26,
+   "divisor": 338,
+   "corrected_alpha": 0.00014792899408284024,
+   "ci_z": 3.7945206104734446
   },
   {
    "predictor": "trend21-crypto",
@@ -748,10 +736,10 @@
    "block_span": 0,
    "horizon_days": 21,
    "family_size": 13,
-   "looks": 25,
-   "divisor": 325,
-   "corrected_alpha": 0.00015384615384615385,
-   "ci_z": 3.784777506186272
+   "looks": 26,
+   "divisor": 338,
+   "corrected_alpha": 0.00014792899408284024,
+   "ci_z": 3.7945206104734446
   },
   {
    "predictor": "trend63",
@@ -784,10 +772,10 @@
    "block_span": 0,
    "horizon_days": 63,
    "family_size": 13,
-   "looks": 25,
-   "divisor": 325,
-   "corrected_alpha": 0.00015384615384615385,
-   "ci_z": 3.784777506186272
+   "looks": 26,
+   "divisor": 338,
+   "corrected_alpha": 0.00014792899408284024,
+   "ci_z": 3.7945206104734446
   },
   {
    "predictor": "vol21",
@@ -820,10 +808,10 @@
    "block_span": 0,
    "horizon_days": 21,
    "family_size": 13,
-   "looks": 25,
-   "divisor": 325,
-   "corrected_alpha": 0.00015384615384615385,
-   "ci_z": 3.784777506186272
+   "looks": 26,
+   "divisor": 338,
+   "corrected_alpha": 0.00014792899408284024,
+   "ci_z": 3.7945206104734446
   }
  ],
  "survivorship_bound": {
