@@ -2,7 +2,7 @@
 
 Every predictor SignalDeck tracks, rendered verbatim from [`accuracy_registry.json`](accuracy_registry.json) on every publish — FAILED and INSUFFICIENT verdicts included, nothing filtered. A deliberately unflattering public record is the point: it cannot be fabricated overnight, and the commit history of this repo makes later retouching of the past record evident.
 
-- Generated: 2026-09-04T19:30:42
+- Generated: 2026-09-05T19:30:42
 - Minimum independent n for a verdict: 30
 - Survivorship epoch: 2026-07-24
 - Null policy: prequential-majority only: each day's constant guess is the majority class over days strictly before it. The hindsight null was retired after the dual-null transition cycle; the switchover regrade recorded zero verdict changes (audits/2026-07-27-null-transition.md).
