@@ -2,7 +2,7 @@
 
 Every predictor SignalDeck tracks, rendered verbatim from [`accuracy_registry.json`](accuracy_registry.json) on every publish — FAILED and INSUFFICIENT verdicts included, nothing filtered. A deliberately unflattering public record is the point: it cannot be fabricated overnight, and the commit history of this repo makes later retouching of the past record evident.
 
-- Generated: 2026-09-06T19:30:34
+- Generated: 2026-09-07T19:30:49
 - Minimum independent n for a verdict: 30
 - Survivorship epoch: 2026-07-24
 - Null policy: prequential-majority only: each day's constant guess is the majority class over days strictly before it. The hindsight null was retired after the dual-null transition cycle; the switchover regrade recorded zero verdict changes (audits/2026-07-27-null-transition.md).
@@ -11,22 +11,22 @@ Every predictor SignalDeck tracks, rendered verbatim from [`accuracy_registry.js
 |---|---|---|--:|--:|---|--:|---|---|
 | directional-ensemble (1d) | direction | all | 2892 | 44.7% | [0.352, 0.547] | 55.0% | FAILED — significantly worse than the naive baseline | live forward record; non-overlapping forward-window blocks, block-resampled interval |
 | prequential-majority (1d) | benchmark | all | 2563 | 55.8% | [0.378, 0.723] | 53.8% | NO SKILL — indistinguishable from baseline | live-committed running-majority benchmark; graded under the identical dedup/survivorship rules as the ensemble |
-| directional-ensemble (1w) | direction | all | 5639 | 45.4% | withheld | 55.8% | INSUFFICIENT DAYS (5/10 credible days of 32, 27 degenerate) — no interval, so no verdict | live forward record; non-overlapping forward-window blocks, block-resampled interval |
-| prequential-majority (1w) | benchmark | all | 5278 | 56.3% | withheld | 55.7% | INSUFFICIENT DAYS (5/10 credible days of 30, 25 degenerate) — no interval, so no verdict | live-committed running-majority benchmark; graded under the identical dedup/survivorship rules as the ensemble |
+| directional-ensemble (1w) | direction | all | 5755 | 45.6% | withheld | 55.8% | INSUFFICIENT DAYS (5/10 credible days of 32, 27 degenerate) — no interval, so no verdict | live forward record; non-overlapping forward-window blocks, block-resampled interval |
+| prequential-majority (1w) | benchmark | all | 5394 | 56.3% | withheld | 55.8% | INSUFFICIENT DAYS (5/10 credible days of 30, 25 degenerate) — no interval, so no verdict | live-committed running-majority benchmark; graded under the identical dedup/survivorship rules as the ensemble |
 | directional-ensemble (1d, high conviction) | direction | \|p-0.5\|>=0.15 | 455 | 45.1% | withheld | 48.5% | INSUFFICIENT DAYS (5/10 credible days of 8, 3 degenerate) — no interval, so no verdict | the tier a user would actually trade |
-| directional-ensemble (1w, high conviction) | direction | \|p-0.5\|>=0.15 | 851 | 43.0% | withheld | 49.8% | INSUFFICIENT DAYS (5/10 credible days of 29, 24 degenerate) — no interval, so no verdict | the tier a user would actually trade |
+| directional-ensemble (1w, high conviction) | direction | \|p-0.5\|>=0.15 | 884 | 43.6% | withheld | 49.9% | INSUFFICIENT DAYS (5/10 credible days of 29, 24 degenerate) — no interval, so no verdict | the tier a user would actually trade |
 | filingsdrift21 | structure | all | 114 | 43.9% | withheld | — | NO BASELINE — naive-persistence null not frozen for these calls | live-graded, interval resampled over non-overlapping horizon blocks |
-| liquidity21 | structure | all | 2535 | 71.0% | withheld | — | INSUFFICIENT BLOCKS (1/10 non-overlapping horizon blocks) — no interval, so no verdict | live-graded, interval resampled over non-overlapping horizon blocks |
-| liquidity21#persist | structure-benchmark | all | 2249 | 69.6% | withheld | — | BENCHMARK — the frozen naive-persistence null itself | "nothing changes" guess frozen at call time and graded by the same resolver as the call; never recomputed afterwards |
-| liquidity21-crypto | structure | all | 72 | 86.1% | withheld | — | INSUFFICIENT BLOCKS (1/10 non-overlapping horizon blocks) — no interval, so no verdict | live-graded, interval resampled over non-overlapping horizon blocks |
-| liquidity21-crypto#persist | structure-benchmark | all | 51 | 80.4% | withheld | — | BENCHMARK — the frozen naive-persistence null itself | "nothing changes" guess frozen at call time and graded by the same resolver as the call; never recomputed afterwards |
-| trend21 | structure | all | 2548 | 79.2% | withheld | — | INSUFFICIENT BLOCKS (1/10 non-overlapping horizon blocks) — no interval, so no verdict | live-graded, interval resampled over non-overlapping horizon blocks |
-| trend21#persist | structure-benchmark | all | 2265 | 79.2% | withheld | — | BENCHMARK — the frozen naive-persistence null itself | "nothing changes" guess frozen at call time and graded by the same resolver as the call; never recomputed afterwards |
-| trend21-crypto | structure | all | 72 | 43.1% | withheld | — | INSUFFICIENT BLOCKS (1/10 non-overlapping horizon blocks) — no interval, so no verdict | live-graded, interval resampled over non-overlapping horizon blocks |
-| trend21-crypto#persist | structure-benchmark | all | 51 | 25.5% | withheld | — | BENCHMARK — the frozen naive-persistence null itself | "nothing changes" guess frozen at call time and graded by the same resolver as the call; never recomputed afterwards |
+| liquidity21 | structure | all | 2580 | 71.0% | withheld | — | INSUFFICIENT BLOCKS (1/10 non-overlapping horizon blocks) — no interval, so no verdict | live-graded, interval resampled over non-overlapping horizon blocks |
+| liquidity21#persist | structure-benchmark | all | 2293 | 69.5% | withheld | — | BENCHMARK — the frozen naive-persistence null itself | "nothing changes" guess frozen at call time and graded by the same resolver as the call; never recomputed afterwards |
+| liquidity21-crypto | structure | all | 79 | 84.8% | withheld | — | INSUFFICIENT BLOCKS (1/10 non-overlapping horizon blocks) — no interval, so no verdict | live-graded, interval resampled over non-overlapping horizon blocks |
+| liquidity21-crypto#persist | structure-benchmark | all | 58 | 79.3% | withheld | — | BENCHMARK — the frozen naive-persistence null itself | "nothing changes" guess frozen at call time and graded by the same resolver as the call; never recomputed afterwards |
+| trend21 | structure | all | 2593 | 79.2% | withheld | — | INSUFFICIENT BLOCKS (1/10 non-overlapping horizon blocks) — no interval, so no verdict | live-graded, interval resampled over non-overlapping horizon blocks |
+| trend21#persist | structure-benchmark | all | 2309 | 79.3% | withheld | — | BENCHMARK — the frozen naive-persistence null itself | "nothing changes" guess frozen at call time and graded by the same resolver as the call; never recomputed afterwards |
+| trend21-crypto | structure | all | 79 | 41.8% | withheld | — | INSUFFICIENT BLOCKS (1/10 non-overlapping horizon blocks) — no interval, so no verdict | live-graded, interval resampled over non-overlapping horizon blocks |
+| trend21-crypto#persist | structure-benchmark | all | 58 | 25.9% | withheld | — | BENCHMARK — the frozen naive-persistence null itself | "nothing changes" guess frozen at call time and graded by the same resolver as the call; never recomputed afterwards |
 | trend63 | structure | all | 0 | — | — | — | PENDING (first grade 2026-09-25, 0/30 resolved) | claim is backtested, not yet a live record |
-| vol21 | structure | all | 2559 | 50.3% | withheld | — | INSUFFICIENT BLOCKS (1/10 non-overlapping horizon blocks) — no interval, so no verdict | live-graded, interval resampled over non-overlapping horizon blocks |
-| vol21#persist | structure-benchmark | all | 2271 | 48.7% | withheld | — | BENCHMARK — the frozen naive-persistence null itself | "nothing changes" guess frozen at call time and graded by the same resolver as the call; never recomputed afterwards |
+| vol21 | structure | all | 2604 | 50.5% | withheld | — | INSUFFICIENT BLOCKS (1/10 non-overlapping horizon blocks) — no interval, so no verdict | live-graded, interval resampled over non-overlapping horizon blocks |
+| vol21#persist | structure-benchmark | all | 2315 | 48.9% | withheld | — | BENCHMARK — the frozen naive-persistence null itself | "nothing changes" guess frozen at call time and graded by the same resolver as the call; never recomputed afterwards |
 
 ## Verifying this record
 
