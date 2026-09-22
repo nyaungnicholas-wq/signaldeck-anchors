@@ -1,13 +1,32 @@
 # SignalDeck — Public Track Record
 
-**GRADING REFUSED — no accuracy figures are published.**
+Every predictor SignalDeck tracks, rendered verbatim from [`accuracy_registry.json`](accuracy_registry.json) on every publish — FAILED and INSUFFICIENT verdicts included, nothing filtered. A deliberately unflattering public record is the point: it cannot be fabricated overnight, and the commit history of this repo makes later retouching of the past record evident.
 
-- Refused since: 2026-09-13T14:43:41
-- Generated: 2026-09-20T14:05:31
-- Withheld grade computed at: 2026-09-13T14:42:10
-- Reason: publication gate: the graded window contains 18 collapsed cross-section(s) of 82 day(s): 1d 2026-07-27 (6 distinct across 330 symbols), 1d 2026-07-28 (8 distinct across 330 symbols), 1d 2026-07-29 (13 distinct across 328 symbols), 1d 2026-07-31 (6 distinct across 328 symbols), 1d 2026-08-01 (6 distinct across 328 symbols), 1d 2026-08-02 (8 distinct across 328 symbols), 1d 2026-08-03 (5 distinct across 328 symbols), 1d 2026-08-04 (13 distinct across 328 symbols), 1d 2026-08-06 (33 distinct across 327 symbols), 1w 2026-07-26 (21 distinct across 326 symbols), 1w 2026-07-27 (7 distinct across 326 symbols), 1w 2026-07-28 (16 distinct across 328 symbols), 1w 2026-07-29 (25 distinct across 327 symbols), 1w 2026-07-31 (33 distinct across 327 symbols), 1w 2026-08-01 (16 distinct across 328 symbols), 1w 2026-08-02 (13 distinct across 328 symbols), 1w 2026-08-03 (7 distinct across 328 symbols), 1w 2026-08-04 (7 distinct across 328 symbols). On a collapsed day the whole universe receives a handful of distinct probabilities, so these rows grade one market-wide call repeated per symbol, not independent per-symbol forecasts. Figures over this window are withheld. The window starts at the survivorship epoch and does not roll forward, so a collapsed day stays in it: this clears when the window is re-registered, not by waiting for more grades.
+- Generated: 2026-09-21T18:38:50
+- Minimum independent n for a verdict: 30
+- Survivorship epoch: 2026-07-24
+- Null policy: prequential-majority only: each day's constant guess is the majority class over days strictly before it. The hindsight null was retired after the dual-null transition cycle; the switchover regrade recorded zero verdict changes (audits/2026-07-27-null-transition.md).
 
-The grade computed at that time is withheld, not lost; it is retained inside [`accuracy_registry.json`](accuracy_registry.json) under `stale_last_registry` for the historical record and is deliberately NOT reprinted here, because a number the publication gate refused to stand behind is not a live number; the in-app `/accuracy` page and `/api/accuracy` apply the same gate from the same registry.
+| Predictor | Family | Band | n | Accuracy | 95% CI | Prequential null | Verdict | Note |
+|---|---|---|--:|--:|---|--:|---|---|
+| directional-ensemble (1d) | direction | all | 603 | 52.2% | [0.424, 0.619] | 51.5% | NO SKILL — indistinguishable from baseline | live forward record; non-overlapping forward-window blocks, block-resampled interval |
+| prequential-majority (1d) | benchmark | all | 603 | 47.3% | [0.366, 0.581] | 51.5% | NO SKILL — indistinguishable from baseline | live-committed running-majority benchmark; graded under the identical dedup/survivorship rules as the ensemble |
+| directional-ensemble (1w) | direction | all | 4830 | 49.6% | withheld | 53.9% | INSUFFICIENT DAYS (6/10 credible days of 33, 27 degenerate) — no interval, so no verdict | live forward record; non-overlapping forward-window blocks, block-resampled interval |
+| prequential-majority (1w) | benchmark | all | 4660 | 45.0% | withheld | 53.6% | INSUFFICIENT DAYS (6/10 credible days of 33, 27 degenerate) — no interval, so no verdict | live-committed running-majority benchmark; graded under the identical dedup/survivorship rules as the ensemble |
+| directional-ensemble (1d, high conviction) | direction | \|p-0.5\|>=0.15 | 1 | 0.0% | withheld | 50.0% | INSUFFICIENT (1/30) | the tier a user would actually trade |
+| directional-ensemble (1w, high conviction) | direction | \|p-0.5\|>=0.15 | 812 | 51.1% | withheld | 60.1% | INSUFFICIENT DAYS (6/10 credible days of 31, 25 degenerate) — no interval, so no verdict | the tier a user would actually trade |
+| filingsdrift21 | structure | all | 180 | 46.7% | withheld | — | NO BASELINE — naive-persistence null not frozen for these calls | live-graded, interval resampled over non-overlapping horizon blocks |
+| liquidity21 | structure | all | 7371 | 68.6% | withheld | — | INSUFFICIENT BLOCKS (2/10 non-overlapping horizon blocks) — no interval, so no verdict | live-graded, interval resampled over non-overlapping horizon blocks |
+| liquidity21#persist | structure-benchmark | all | 7083 | 69.1% | withheld | — | BENCHMARK — the frozen naive-persistence null itself | "nothing changes" guess frozen at call time and graded by the same resolver as the call; never recomputed afterwards |
+| liquidity21-crypto | structure | all | 177 | 52.0% | withheld | — | INSUFFICIENT BLOCKS (2/10 non-overlapping horizon blocks) — no interval, so no verdict | live-graded, interval resampled over non-overlapping horizon blocks |
+| liquidity21-crypto#persist | structure-benchmark | all | 156 | 45.5% | withheld | — | BENCHMARK — the frozen naive-persistence null itself | "nothing changes" guess frozen at call time and graded by the same resolver as the call; never recomputed afterwards |
+| trend21 | structure | all | 7414 | 78.7% | withheld | — | INSUFFICIENT BLOCKS (2/10 non-overlapping horizon blocks) — no interval, so no verdict | live-graded, interval resampled over non-overlapping horizon blocks |
+| trend21#persist | structure-benchmark | all | 7130 | 78.9% | withheld | — | BENCHMARK — the frozen naive-persistence null itself | "nothing changes" guess frozen at call time and graded by the same resolver as the call; never recomputed afterwards |
+| trend21-crypto | structure | all | 177 | 40.1% | withheld | — | INSUFFICIENT BLOCKS (2/10 non-overlapping horizon blocks) — no interval, so no verdict | live-graded, interval resampled over non-overlapping horizon blocks |
+| trend21-crypto#persist | structure-benchmark | all | 156 | 33.3% | withheld | — | BENCHMARK — the frozen naive-persistence null itself | "nothing changes" guess frozen at call time and graded by the same resolver as the call; never recomputed afterwards |
+| trend63 | structure | all | 0 | — | — | — | PENDING (first grade 2026-09-25, 0/30 resolved) | claim is backtested, not yet a live record |
+| vol21 | structure | all | 7436 | 48.3% | withheld | — | INSUFFICIENT BLOCKS (2/10 non-overlapping horizon blocks) — no interval, so no verdict | live-graded, interval resampled over non-overlapping horizon blocks |
+| vol21#persist | structure-benchmark | all | 7145 | 46.7% | withheld | — | BENCHMARK — the frozen naive-persistence null itself | "nothing changes" guess frozen at call time and graded by the same resolver as the call; never recomputed afterwards |
 
 ## Verifying this record
 
