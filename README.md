@@ -1,13 +1,32 @@
 # SignalDeck — Public Track Record
 
-**GRADING REFUSED — no accuracy figures are published.**
+Every predictor SignalDeck tracks, rendered verbatim from [`accuracy_registry.json`](accuracy_registry.json) on every publish — FAILED and INSUFFICIENT verdicts included, nothing filtered. A deliberately unflattering public record is the point: it cannot be fabricated overnight, and the commit history of this repo makes later retouching of the past record evident.
 
-- Refused since: 2026-09-24T14:05:03
-- Generated: 2026-09-24T14:05:03
-- Withheld grade computed at: 2026-09-23T14:06:32
-- Reason: deployment drift check failed (exit 1) — a mechanism the pre-registration chain claims is not observable in the live database, or the check itself could not run (see the DEPLOYMENT DRIFT lines above in this log); the grader was not run
+- Generated: 2026-09-25T14:05:42
+- Minimum independent n for a verdict: 30
+- Survivorship epoch: 2026-07-24
+- Null policy: prequential-majority only: each day's constant guess is the majority class over days strictly before it. The hindsight null was retired after the dual-null transition cycle; the switchover regrade recorded zero verdict changes (audits/2026-07-27-null-transition.md).
 
-The grade computed at that time is withheld, not lost; it is retained inside [`accuracy_registry.json`](accuracy_registry.json) under `stale_last_registry` for the historical record and is deliberately NOT reprinted here, because a number the publication gate refused to stand behind is not a live number; the in-app `/accuracy` page and `/api/accuracy` apply the same gate from the same registry.
+| Predictor | Family | Band | n | Accuracy | 95% CI | Prequential null | Verdict | Note |
+|---|---|---|--:|--:|---|--:|---|---|
+| directional-ensemble (1d) | direction | all | 603 | 52.2% | [0.423, 0.62] | 51.5% | NO SKILL — indistinguishable from baseline | live forward record; non-overlapping forward-window blocks, block-resampled interval |
+| prequential-majority (1d) | benchmark | all | 603 | 47.3% | [0.366, 0.582] | 51.5% | NO SKILL — indistinguishable from baseline | live-committed running-majority benchmark; graded under the identical dedup/survivorship rules as the ensemble |
+| directional-ensemble (1w) | direction | all | 6452 | 48.4% | withheld | 56.0% | INSUFFICIENT DAYS (7/10 credible days of 37, 30 degenerate) — no interval, so no verdict | live forward record; non-overlapping forward-window blocks, block-resampled interval |
+| prequential-majority (1w) | benchmark | all | 6452 | 43.0% | withheld | 56.0% | INSUFFICIENT DAYS (7/10 credible days of 37, 30 degenerate) — no interval, so no verdict | live-committed running-majority benchmark; graded under the identical dedup/survivorship rules as the ensemble |
+| directional-ensemble (1d, high conviction) | direction | \|p-0.5\|>=0.15 | 1 | 0.0% | withheld | 50.0% | INSUFFICIENT (1/30) | the tier a user would actually trade |
+| directional-ensemble (1w, high conviction) | direction | \|p-0.5\|>=0.15 | 1055 | 49.3% | withheld | 60.4% | INSUFFICIENT DAYS (7/10 credible days of 35, 28 degenerate) — no interval, so no verdict | the tier a user would actually trade |
+| filingsdrift21 | structure | all | 182 | 46.7% | withheld | — | NO BASELINE — naive-persistence null not frozen for these calls | live-graded, interval resampled over non-overlapping horizon blocks |
+| liquidity21 | structure | all | 9059 | 69.3% | withheld | — | INSUFFICIENT BLOCKS (2/10 non-overlapping horizon blocks) — no interval, so no verdict | live-graded, interval resampled over non-overlapping horizon blocks |
+| liquidity21#persist | structure-benchmark | all | 8771 | 69.9% | withheld | — | BENCHMARK — the frozen naive-persistence null itself | "nothing changes" guess frozen at call time and graded by the same resolver as the call; never recomputed afterwards |
+| liquidity21-crypto | structure | all | 205 | 50.2% | withheld | — | INSUFFICIENT BLOCKS (2/10 non-overlapping horizon blocks) — no interval, so no verdict | live-graded, interval resampled over non-overlapping horizon blocks |
+| liquidity21-crypto#persist | structure-benchmark | all | 184 | 44.6% | withheld | — | BENCHMARK — the frozen naive-persistence null itself | "nothing changes" guess frozen at call time and graded by the same resolver as the call; never recomputed afterwards |
+| trend21 | structure | all | 9114 | 79.0% | withheld | — | INSUFFICIENT BLOCKS (2/10 non-overlapping horizon blocks) — no interval, so no verdict | live-graded, interval resampled over non-overlapping horizon blocks |
+| trend21#persist | structure-benchmark | all | 8830 | 79.2% | withheld | — | BENCHMARK — the frozen naive-persistence null itself | "nothing changes" guess frozen at call time and graded by the same resolver as the call; never recomputed afterwards |
+| trend21-crypto | structure | all | 205 | 46.8% | withheld | — | INSUFFICIENT BLOCKS (2/10 non-overlapping horizon blocks) — no interval, so no verdict | live-graded, interval resampled over non-overlapping horizon blocks |
+| trend21-crypto#persist | structure-benchmark | all | 184 | 41.3% | withheld | — | BENCHMARK — the frozen naive-persistence null itself | "nothing changes" guess frozen at call time and graded by the same resolver as the call; never recomputed afterwards |
+| trend63 | structure | all | 0 | — | — | — | PENDING (first grade 2026-09-25, 0/30 resolved) | claim is backtested, not yet a live record |
+| vol21 | structure | all | 9135 | 49.0% | withheld | — | INSUFFICIENT BLOCKS (2/10 non-overlapping horizon blocks) — no interval, so no verdict | live-graded, interval resampled over non-overlapping horizon blocks |
+| vol21#persist | structure-benchmark | all | 8844 | 46.7% | withheld | — | BENCHMARK — the frozen naive-persistence null itself | "nothing changes" guess frozen at call time and graded by the same resolver as the call; never recomputed afterwards |
 
 ## Verifying this record
 
