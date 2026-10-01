@@ -1,14 +1,14 @@
 {
- "generated": "2026-09-29T19:01:04",
- "graded_at": "2026-09-29T19:01:04",
+ "generated": "2026-09-30T18:04:11",
+ "graded_at": "2026-09-30T18:04:11",
  "refused_since": null,
  "min_independent_n": 30,
  "max_alpha": 0.05,
  "family_size": 18,
- "looks": 69,
- "divisor": 1242,
- "corrected_alpha": 4.025764895330113e-05,
- "ci_z": 4.10599597517396,
+ "looks": 70,
+ "divisor": 1260,
+ "corrected_alpha": 3.968253968253968e-05,
+ "ci_z": 4.109320282055597,
  "multiplicity_rule": "Published intervals are Bonferroni-corrected for both multiplicities this surface pays: FAMILY (rows published in the same grading cycle) and LOOKS (grading cycles taken over the same accruing rows). divisor = family_size * looks; corrected_alpha = maxAlpha / divisor; z = probit(1 - corrected_alpha/2), floored at the uncorrected two-sided z so the correction can only ever WIDEN an interval, never narrow one. family_size is the number of rows the cycle actually publishes, measured from the rows themselves, then folded with max() against the largest family ever published on the grading-look chain and the family the last published registry JSON declared, so publishing fewer rows can never refund multiplicity a wider family already spent. looks is the monotone count of 'grading-look' records on the pre-registration chain, folded with max() over the record count, the counters those records carry, and the looks already published in the registry JSON, so neither log rotation nor a re-cut snapshot can refund a look already taken.",
  "survivorship_epoch": "2026-07-24",
  "grading_epoch": "2026-08-07",
@@ -25,8 +25,8 @@
   },
   "structure": {
    "clean": true,
-   "symbols_graded": 884,
-   "symbols_resolvable": 884,
+   "symbols_graded": 887,
+   "symbols_resolvable": 887,
    "symbols_inactive_undated": 0,
    "symbols_unknown": 0,
    "coverage": 1.0,
@@ -36,13 +36,13 @@
  },
  "settlement_quarantine": {
   "applied": true,
-  "rows_considered": 278125,
+  "rows_considered": 281155,
   "rows_excluded": 38,
   "rows_unsettled": 28,
   "rows_unverifiable": 10,
-  "excluded_fraction": 0.00013662921348314607,
-  "graded_observations_before": 16999,
-  "graded_observations_after": 16991,
+  "excluded_fraction": 0.00013515676406252778,
+  "graded_observations_before": 17621,
+  "graded_observations_after": 17613,
   "graded_observations_dropped": 8,
   "by_horizon": {
    "1d": {
@@ -62,20 +62,20 @@
     "graded_after": 683
    },
    "1w": {
-    "considered": 125193,
+    "considered": 126415,
     "unsettled": 7,
     "unverifiable": 0,
     "excluded": 7,
-    "graded_before": 7830,
-    "graded_after": 7830
+    "graded_before": 8129,
+    "graded_after": 8129
    },
    "1w#pm": {
-    "considered": 124596,
+    "considered": 126404,
     "unsettled": 7,
     "unverifiable": 0,
     "excluded": 7,
-    "graded_before": 7795,
-    "graded_after": 7795
+    "graded_before": 8118,
+    "graded_after": 8118
    }
   },
   "method": "structural, per row: resolved_at must be at or after the forward bar's true session close, where the base/target/forward bars are reconstructed exactly as PredictionResolver.Run selects them (daemon/internal/pipeline/predict.go). Session close is the bar stamp + 16h for stocks (ET midnight -> 16:00 ET) and + 24h for crypto. No timestamp cutoff and no basis_epoch: the deployed resolver still carries the defect, so the window is open.",
@@ -109,16 +109,16 @@
     "rows_considered": 603
    },
    "1w": {
-    "days_dropped": 9,
+    "days_dropped": 10,
     "days_kept": 32,
-    "rows_dropped": 37,
-    "rows_considered": 6838
+    "rows_dropped": 55,
+    "rows_considered": 7137
    },
    "1w#pm": {
     "days_dropped": 10,
-    "days_kept": 31,
+    "days_kept": 32,
     "rows_dropped": 44,
-    "rows_considered": 6803
+    "rows_considered": 7126
    }
   }
  },
@@ -147,7 +147,7 @@
   "kinds": []
  },
  "null_frozen": true,
- "null_frozen_coverage": 0.9640820606934521,
+ "null_frozen_coverage": 0.9668471520614659,
  "retire_rule_chained": true,
  "retire_rule_chain_seq": 46,
  "calibration": {
@@ -208,50 +208,50 @@
     {
      "p_lo": 0.2,
      "p_hi": 0.3,
-     "mean_predicted": 0.26189423123682015,
-     "realized_up_freq": 0.39325842696629215,
-     "n": 178,
-     "distinct_days": 32
+     "mean_predicted": 0.2618533438158653,
+     "realized_up_freq": 0.39779005524861877,
+     "n": 181,
+     "distinct_days": 33
     },
     {
      "p_lo": 0.3,
      "p_hi": 0.4,
-     "mean_predicted": 0.35860503843187524,
-     "realized_up_freq": 0.42133333333333334,
-     "n": 750,
+     "mean_predicted": 0.35884080432519677,
+     "realized_up_freq": 0.42463958060288337,
+     "n": 763,
      "distinct_days": 35
     },
     {
      "p_lo": 0.4,
      "p_hi": 0.5,
-     "mean_predicted": 0.45901891956489593,
-     "realized_up_freq": 0.4714346170122725,
-     "n": 2363,
-     "distinct_days": 37
+     "mean_predicted": 0.4592027180878919,
+     "realized_up_freq": 0.4709467696058513,
+     "n": 2461,
+     "distinct_days": 38
     },
     {
      "p_lo": 0.5,
      "p_hi": 0.6,
-     "mean_predicted": 0.5423101906939423,
-     "realized_up_freq": 0.4242671009771987,
-     "n": 2456,
-     "distinct_days": 35
+     "mean_predicted": 0.5422464213889979,
+     "realized_up_freq": 0.42709132770529545,
+     "n": 2606,
+     "distinct_days": 36
     },
     {
      "p_lo": 0.6,
      "p_hi": 0.7,
-     "mean_predicted": 0.6383451270946732,
-     "realized_up_freq": 0.4316109422492401,
-     "n": 658,
+     "mean_predicted": 0.6379879363597822,
+     "realized_up_freq": 0.4340175953079179,
+     "n": 682,
      "distinct_days": 32
     },
     {
      "p_lo": 0.7,
      "p_hi": 0.8,
-     "mean_predicted": 0.7426748534192583,
-     "realized_up_freq": 0.3333333333333333,
-     "n": 234,
-     "distinct_days": 28
+     "mean_predicted": 0.742943994684753,
+     "realized_up_freq": 0.32653061224489793,
+     "n": 245,
+     "distinct_days": 29
     },
     {
      "p_lo": 0.8,
@@ -281,8 +281,8 @@
    "live_n": 603,
    "live_acc": 0.5223880597014925,
    "ci": [
-    0.4229730329866983,
-    0.6200604693202851
+    0.4228949960171713,
+    0.6201357934560043
    ],
    "ci_method": "block-clustered-wilson",
    "distinct_days": 19,
@@ -292,8 +292,8 @@
    "null_acc": 0.5149253731343284,
    "null_method": "prequential-majority (walk-forward)",
    "null_ci": [
-    0.40975683808142194,
-    0.6187884904183468
+    0.409674910326248,
+    0.6188683961464566
    ],
    "skill": 0.00746268656716409,
    "verdict": "NO SKILL \u2014 indistinguishable from baseline",
@@ -305,8 +305,8 @@
      "correct": 11,
      "accuracy": 0.5789473684210527,
      "ci": [
-      0.20126474733408645,
-      0.8823957847847741
+      0.20108516644167385,
+      0.8825116986231943
      ]
     },
     "note": "DESCRIPTIVE, sets no verdict. mean_daily_agreement is the mean fraction of a day's calls pointing the same way; above ~0.8 the day is the honest unit and day_bet is the grade that framing supports. A high agreement with a large live_n means the row's evidence is the day count, not the row count."
@@ -316,19 +316,19 @@
    "settlement_filtered": true,
    "settlement_excluded": 38,
    "family_size": 18,
-   "looks": 69,
-   "divisor": 1242,
-   "corrected_alpha": 4.025764895330113e-05,
-   "ci_z": 4.10599597517396,
+   "looks": 70,
+   "divisor": 1260,
+   "corrected_alpha": 3.968253968253968e-05,
+   "ci_z": 4.109320282055597,
    "honesty": {
     "publishable": false,
     "one_sided": true,
     "reason": "accuracy 0.5224 IS the null itself (0.5149) to within 0.02, on a book calling DOWN on 52.9% of graded rows, with mean daily agreement 0.922. That is ONE market call replicated across the cross-section, not independent forecasts: the number measures the base rate of a one-sided selection, not forecast quality. Read day_bet instead.",
     "resolvability": {
      "supported": false,
-     "overlap_lo": 0.4229730329866983,
-     "overlap_hi": 0.6187884904183468,
-     "reason": "accuracy 0.5224 [0.4230, 0.6201] and its null 0.5149 [0.4098, 0.6188] OVERLAP across [0.4230, 0.6188]: the verdict compares the accuracy interval to the null's point estimate and ignores the null's own published interval, so the stated skill of +0.0075 is not resolved by this sample"
+     "overlap_lo": 0.4228949960171713,
+     "overlap_hi": 0.6188683961464566,
+     "reason": "accuracy 0.5224 [0.4229, 0.6201] and its null 0.5149 [0.4097, 0.6189] OVERLAP across [0.4229, 0.6189]: the verdict compares the accuracy interval to the null's point estimate and ignores the null's own published interval, so the stated skill of +0.0075 is not resolved by this sample"
     },
     "result": {
      "schema_version": 1,
@@ -339,8 +339,8 @@
      "band": "all",
      "universe": "direction / all",
      "evaluation": {
-      "graded_at": "2026-09-29T19:01:04",
-      "generated": "2026-09-29T19:01:04"
+      "graded_at": "2026-09-30T18:04:11",
+      "generated": "2026-09-30T18:04:11"
      },
      "counts": {
       "rows": 603,
@@ -351,18 +351,18 @@
      "estimate": {
       "point": 0.5223880597014925,
       "ci": [
-       0.4229730329866983,
-       0.6200604693202851
+       0.4228949960171713,
+       0.6201357934560043
       ],
       "ci_method": "block-clustered-wilson",
-      "ci_z": 4.10599597517396,
-      "alpha": 4.025764895330113e-05
+      "ci_z": 4.109320282055597,
+      "alpha": 3.968253968253968e-05
      },
      "baseline": {
       "value": 0.5149253731343284,
       "ci": [
-       0.40975683808142194,
-       0.6187884904183468
+       0.409674910326248,
+       0.6188683961464566
       ],
       "method": "prequential-majority (walk-forward)",
       "policy": "prequential-majority only: each day's constant guess is the majority class over days strictly before it. The hindsight null was retired after the dual-null transition cycle; the switchover regrade recorded zero verdict changes (audits/2026-07-27-null-transition.md).",
@@ -377,13 +377,13 @@
      "population_filters": {
       "settlement_quarantine": {
        "applied": true,
-       "rows_considered": 278125,
+       "rows_considered": 281155,
        "rows_excluded": 38,
        "rows_unsettled": 28,
        "rows_unverifiable": 10,
-       "excluded_fraction": 0.00013662921348314607,
-       "graded_observations_before": 16999,
-       "graded_observations_after": 16991,
+       "excluded_fraction": 0.00013515676406252778,
+       "graded_observations_before": 17621,
+       "graded_observations_after": 17613,
        "graded_observations_dropped": 8,
        "by_horizon": {
         "1d": {
@@ -403,20 +403,20 @@
          "graded_after": 683
         },
         "1w": {
-         "considered": 125193,
+         "considered": 126415,
          "unsettled": 7,
          "unverifiable": 0,
          "excluded": 7,
-         "graded_before": 7830,
-         "graded_after": 7830
+         "graded_before": 8129,
+         "graded_after": 8129
         },
         "1w#pm": {
-         "considered": 124596,
+         "considered": 126404,
          "unsettled": 7,
          "unverifiable": 0,
          "excluded": 7,
-         "graded_before": 7795,
-         "graded_after": 7795
+         "graded_before": 8118,
+         "graded_after": 8118
         }
        },
        "method": "structural, per row: resolved_at must be at or after the forward bar's true session close, where the base/target/forward bars are reconstructed exactly as PredictionResolver.Run selects them (daemon/internal/pipeline/predict.go). Session close is the bar stamp + 16h for stocks (ET midnight -> 16:00 ET) and + 24h for crypto. No timestamp cutoff and no basis_epoch: the deployed resolver still carries the defect, so the window is open.",
@@ -441,16 +441,16 @@
          "rows_considered": 603
         },
         "1w": {
-         "days_dropped": 9,
+         "days_dropped": 10,
          "days_kept": 32,
-         "rows_dropped": 37,
-         "rows_considered": 6838
+         "rows_dropped": 55,
+         "rows_considered": 7137
         },
         "1w#pm": {
          "days_dropped": 10,
-         "days_kept": 31,
+         "days_kept": 32,
          "rows_dropped": 44,
-         "rows_considered": 6803
+         "rows_considered": 7126
         }
        }
       },
@@ -466,12 +466,12 @@
      },
      "status": "WITHHELD",
      "reason_code": "NULL_INTERVAL_OVERLAP",
-     "reason": "accuracy 0.5224 [0.4230, 0.6201] and its null 0.5149 [0.4098, 0.6188] OVERLAP across [0.4230, 0.6188]: the verdict compares the accuracy interval to the null's point estimate and ignores the null's own published interval, so the stated skill of +0.0075 is not resolved by this sample",
+     "reason": "accuracy 0.5224 [0.4229, 0.6201] and its null 0.5149 [0.4097, 0.6189] OVERLAP across [0.4229, 0.6189]: the verdict compares the accuracy interval to the null's point estimate and ignores the null's own published interval, so the stated skill of +0.0075 is not resolved by this sample",
      "provenance": {
       "grader_sha256": "43799ea4bab7f20e4608abe40cb0edb30efb3bb7fc50870e55f36c3e569836d2",
       "grading_protocol_seq": 118,
-      "code_commit": "e3e65a1967e7c7e79039784fde406bab8d3a73a0",
-      "registry_generated": "2026-09-29T19:01:04"
+      "code_commit": "aab64727e4653e5d064771b01c209d3f34c94c78",
+      "registry_generated": "2026-09-30T18:04:11"
      }
     },
     "calls_up": 0.47067125839778695,
@@ -486,8 +486,8 @@
    "live_n": 603,
    "live_acc": 0.472636815920398,
    "ci": [
-    0.3658367327719446,
-    0.5820014284646752
+    0.3657553001263004,
+    0.5820868204187691
    ],
    "ci_method": "block-clustered-wilson",
    "distinct_days": 19,
@@ -497,8 +497,8 @@
    "null_acc": 0.5149253731343284,
    "null_method": "prequential-majority (walk-forward)",
    "null_ci": [
-    0.40975683808142194,
-    0.6187884904183468
+    0.409674910326248,
+    0.6188683961464566
    ],
    "skill": -0.04228855721393038,
    "verdict": "NO SKILL \u2014 indistinguishable from baseline",
@@ -510,8 +510,8 @@
      "correct": 8,
      "accuracy": 0.42105263157894735,
      "ci": [
-      0.1176042152152259,
-      0.7987352526659136
+      0.11748830137680566,
+      0.7989148335583262
      ]
     },
     "note": "DESCRIPTIVE, sets no verdict. mean_daily_agreement is the mean fraction of a day's calls pointing the same way; above ~0.8 the day is the honest unit and day_bet is the grade that framing supports. A high agreement with a large live_n means the row's evidence is the day count, not the row count."
@@ -521,39 +521,39 @@
    "settlement_filtered": true,
    "settlement_excluded": 38,
    "family_size": 18,
-   "looks": 69,
-   "divisor": 1242,
-   "corrected_alpha": 4.025764895330113e-05,
-   "ci_z": 4.10599597517396
+   "looks": 70,
+   "divisor": 1260,
+   "corrected_alpha": 3.968253968253968e-05,
+   "ci_z": 4.109320282055597
   },
   {
    "predictor": "directional-ensemble (1w)",
    "family": "direction",
    "band": "all",
    "claimed": null,
-   "live_n": 6838,
-   "live_acc": 0.4825972506580872,
+   "live_n": 7137,
+   "live_acc": 0.48255569567044976,
    "ci": null,
    "ci_method": "withheld",
-   "distinct_days": 41,
+   "distinct_days": 42,
    "design_effect": null,
    "effective_n": null,
-   "null_prequential": 0.5531588183679439,
-   "null_acc": 0.5531588183679439,
+   "null_prequential": 0.5522628555415441,
+   "null_acc": 0.5522628555415441,
    "null_method": "prequential-majority (walk-forward)",
    "null_ci": null,
-   "skill": -0.07056156770985672,
-   "verdict": "INSUFFICIENT DAYS (7/10 credible days of 41, 34 degenerate) \u2014 no interval, so no verdict",
+   "skill": -0.06970715987109433,
+   "verdict": "INSUFFICIENT DAYS (7/10 credible days of 42, 35 degenerate) \u2014 no interval, so no verdict",
    "retire": false,
    "breadth": {
-    "mean_daily_agreement": 0.6530774845524153,
+    "mean_daily_agreement": 0.6531067272975123,
     "day_bet": {
-     "days": 41,
-     "correct": 20,
-     "accuracy": 0.4878048780487805,
+     "days": 42,
+     "correct": 19,
+     "accuracy": 0.4523809523809524,
      "ci": [
-      0.2215155888457045,
-      0.7612010759362795
+      0.19915224783175217,
+      0.7329204835297021
      ]
     },
     "note": "DESCRIPTIVE, sets no verdict. mean_daily_agreement is the mean fraction of a day's calls pointing the same way; above ~0.8 the day is the honest unit and day_bet is the grade that framing supports. A high agreement with a large live_n means the row's evidence is the day count, not the row count."
@@ -563,10 +563,10 @@
    "settlement_filtered": true,
    "settlement_excluded": 38,
    "family_size": 18,
-   "looks": 69,
-   "divisor": 1242,
-   "corrected_alpha": 4.025764895330113e-05,
-   "ci_z": 4.10599597517396,
+   "looks": 70,
+   "divisor": 1260,
+   "corrected_alpha": 3.968253968253968e-05,
+   "ci_z": 4.109320282055597,
    "honesty": {
     "publishable": true,
     "one_sided": false,
@@ -586,24 +586,24 @@
      "band": "all",
      "universe": "direction / all",
      "evaluation": {
-      "graded_at": "2026-09-29T19:01:04",
-      "generated": "2026-09-29T19:01:04"
+      "graded_at": "2026-09-30T18:04:11",
+      "generated": "2026-09-30T18:04:11"
      },
      "counts": {
-      "rows": 6838,
-      "distinct_days": 41,
+      "rows": 7137,
+      "distinct_days": 42,
       "effective_n": null,
       "design_effect": null
      },
      "estimate": {
-      "point": 0.4825972506580872,
+      "point": 0.48255569567044976,
       "ci": null,
       "ci_method": "withheld",
-      "ci_z": 4.10599597517396,
-      "alpha": 4.025764895330113e-05
+      "ci_z": 4.109320282055597,
+      "alpha": 3.968253968253968e-05
      },
      "baseline": {
-      "value": 0.5531588183679439,
+      "value": 0.5522628555415441,
       "ci": null,
       "method": "prequential-majority (walk-forward)",
       "policy": "prequential-majority only: each day's constant guess is the majority class over days strictly before it. The hindsight null was retired after the dual-null transition cycle; the switchover regrade recorded zero verdict changes (audits/2026-07-27-null-transition.md).",
@@ -618,13 +618,13 @@
      "population_filters": {
       "settlement_quarantine": {
        "applied": true,
-       "rows_considered": 278125,
+       "rows_considered": 281155,
        "rows_excluded": 38,
        "rows_unsettled": 28,
        "rows_unverifiable": 10,
-       "excluded_fraction": 0.00013662921348314607,
-       "graded_observations_before": 16999,
-       "graded_observations_after": 16991,
+       "excluded_fraction": 0.00013515676406252778,
+       "graded_observations_before": 17621,
+       "graded_observations_after": 17613,
        "graded_observations_dropped": 8,
        "by_horizon": {
         "1d": {
@@ -644,20 +644,20 @@
          "graded_after": 683
         },
         "1w": {
-         "considered": 125193,
+         "considered": 126415,
          "unsettled": 7,
          "unverifiable": 0,
          "excluded": 7,
-         "graded_before": 7830,
-         "graded_after": 7830
+         "graded_before": 8129,
+         "graded_after": 8129
         },
         "1w#pm": {
-         "considered": 124596,
+         "considered": 126404,
          "unsettled": 7,
          "unverifiable": 0,
          "excluded": 7,
-         "graded_before": 7795,
-         "graded_after": 7795
+         "graded_before": 8118,
+         "graded_after": 8118
         }
        },
        "method": "structural, per row: resolved_at must be at or after the forward bar's true session close, where the base/target/forward bars are reconstructed exactly as PredictionResolver.Run selects them (daemon/internal/pipeline/predict.go). Session close is the bar stamp + 16h for stocks (ET midnight -> 16:00 ET) and + 24h for crypto. No timestamp cutoff and no basis_epoch: the deployed resolver still carries the defect, so the window is open.",
@@ -682,16 +682,16 @@
          "rows_considered": 603
         },
         "1w": {
-         "days_dropped": 9,
+         "days_dropped": 10,
          "days_kept": 32,
-         "rows_dropped": 37,
-         "rows_considered": 6838
+         "rows_dropped": 55,
+         "rows_considered": 7137
         },
         "1w#pm": {
          "days_dropped": 10,
-         "days_kept": 31,
+         "days_kept": 32,
          "rows_dropped": 44,
-         "rows_considered": 6803
+         "rows_considered": 7126
         }
        }
       },
@@ -711,11 +711,11 @@
      "provenance": {
       "grader_sha256": "43799ea4bab7f20e4608abe40cb0edb30efb3bb7fc50870e55f36c3e569836d2",
       "grading_protocol_seq": 118,
-      "code_commit": "e3e65a1967e7c7e79039784fde406bab8d3a73a0",
-      "registry_generated": "2026-09-29T19:01:04"
+      "code_commit": "aab64727e4653e5d064771b01c209d3f34c94c78",
+      "registry_generated": "2026-09-30T18:04:11"
      }
     },
-    "calls_up": 0.44145772155711166,
+    "calls_up": 0.44359308164403943,
     "source": "tools/selection_honesty.py"
    }
   },
@@ -724,29 +724,29 @@
    "family": "benchmark",
    "band": "all",
    "claimed": null,
-   "live_n": 6803,
-   "live_acc": 0.43539614875790095,
+   "live_n": 7126,
+   "live_acc": 0.4392365983721583,
    "ci": null,
    "ci_method": "withheld",
-   "distinct_days": 41,
+   "distinct_days": 42,
    "design_effect": null,
    "effective_n": null,
-   "null_prequential": 0.5535058062619432,
-   "null_acc": 0.5535058062619432,
+   "null_prequential": 0.5518523715969689,
+   "null_acc": 0.5518523715969689,
    "null_method": "prequential-majority (walk-forward)",
    "null_ci": null,
-   "skill": -0.11810965750404229,
-   "verdict": "INSUFFICIENT DAYS (7/10 credible days of 41, 34 degenerate) \u2014 no interval, so no verdict",
+   "skill": -0.11261577322481059,
+   "verdict": "INSUFFICIENT DAYS (7/10 credible days of 42, 35 degenerate) \u2014 no interval, so no verdict",
    "retire": false,
    "breadth": {
     "mean_daily_agreement": 1.0,
     "day_bet": {
-     "days": 41,
-     "correct": 11,
-     "accuracy": 0.2682926829268293,
+     "days": 42,
+     "correct": 13,
+     "accuracy": 0.30952380952380953,
      "ci": [
-      0.08729210151123826,
-      0.5843245293464596
+      0.11062954526772345,
+      0.6176613801780939
      ]
     },
     "note": "DESCRIPTIVE, sets no verdict. mean_daily_agreement is the mean fraction of a day's calls pointing the same way; above ~0.8 the day is the honest unit and day_bet is the grade that framing supports. A high agreement with a large live_n means the row's evidence is the day count, not the row count."
@@ -756,10 +756,10 @@
    "settlement_filtered": true,
    "settlement_excluded": 38,
    "family_size": 18,
-   "looks": 69,
-   "divisor": 1242,
-   "corrected_alpha": 4.025764895330113e-05,
-   "ci_z": 4.10599597517396
+   "looks": 70,
+   "divisor": 1260,
+   "corrected_alpha": 3.968253968253968e-05,
+   "ci_z": 4.109320282055597
   },
   {
    "predictor": "directional-ensemble (1d, high conviction)",
@@ -788,7 +788,7 @@
      "accuracy": 0.0,
      "ci": [
       0.0,
-      0.9440064597001581
+      0.9440919540936882
      ]
     },
     "note": "DESCRIPTIVE, sets no verdict. mean_daily_agreement is the mean fraction of a day's calls pointing the same way; above ~0.8 the day is the honest unit and day_bet is the grade that framing supports. A high agreement with a large live_n means the row's evidence is the day count, not the row count."
@@ -798,10 +798,10 @@
    "settlement_filtered": true,
    "settlement_excluded": 38,
    "family_size": 18,
-   "looks": 69,
-   "divisor": 1242,
-   "corrected_alpha": 4.025764895330113e-05,
-   "ci_z": 4.10599597517396,
+   "looks": 70,
+   "divisor": 1260,
+   "corrected_alpha": 3.968253968253968e-05,
+   "ci_z": 4.109320282055597,
    "honesty": {
     "publishable": true,
     "one_sided": true,
@@ -821,8 +821,8 @@
      "band": "|p-0.5|>=0.15",
      "universe": "direction / |p-0.5|>=0.15",
      "evaluation": {
-      "graded_at": "2026-09-29T19:01:04",
-      "generated": "2026-09-29T19:01:04"
+      "graded_at": "2026-09-30T18:04:11",
+      "generated": "2026-09-30T18:04:11"
      },
      "counts": {
       "rows": 1,
@@ -834,8 +834,8 @@
       "point": 0.0,
       "ci": null,
       "ci_method": "withheld",
-      "ci_z": 4.10599597517396,
-      "alpha": 4.025764895330113e-05
+      "ci_z": 4.109320282055597,
+      "alpha": 3.968253968253968e-05
      },
      "baseline": {
       "value": 0.5,
@@ -853,13 +853,13 @@
      "population_filters": {
       "settlement_quarantine": {
        "applied": true,
-       "rows_considered": 278125,
+       "rows_considered": 281155,
        "rows_excluded": 38,
        "rows_unsettled": 28,
        "rows_unverifiable": 10,
-       "excluded_fraction": 0.00013662921348314607,
-       "graded_observations_before": 16999,
-       "graded_observations_after": 16991,
+       "excluded_fraction": 0.00013515676406252778,
+       "graded_observations_before": 17621,
+       "graded_observations_after": 17613,
        "graded_observations_dropped": 8,
        "by_horizon": {
         "1d": {
@@ -879,20 +879,20 @@
          "graded_after": 683
         },
         "1w": {
-         "considered": 125193,
+         "considered": 126415,
          "unsettled": 7,
          "unverifiable": 0,
          "excluded": 7,
-         "graded_before": 7830,
-         "graded_after": 7830
+         "graded_before": 8129,
+         "graded_after": 8129
         },
         "1w#pm": {
-         "considered": 124596,
+         "considered": 126404,
          "unsettled": 7,
          "unverifiable": 0,
          "excluded": 7,
-         "graded_before": 7795,
-         "graded_after": 7795
+         "graded_before": 8118,
+         "graded_after": 8118
         }
        },
        "method": "structural, per row: resolved_at must be at or after the forward bar's true session close, where the base/target/forward bars are reconstructed exactly as PredictionResolver.Run selects them (daemon/internal/pipeline/predict.go). Session close is the bar stamp + 16h for stocks (ET midnight -> 16:00 ET) and + 24h for crypto. No timestamp cutoff and no basis_epoch: the deployed resolver still carries the defect, so the window is open.",
@@ -917,16 +917,16 @@
          "rows_considered": 603
         },
         "1w": {
-         "days_dropped": 9,
+         "days_dropped": 10,
          "days_kept": 32,
-         "rows_dropped": 37,
-         "rows_considered": 6838
+         "rows_dropped": 55,
+         "rows_considered": 7137
         },
         "1w#pm": {
          "days_dropped": 10,
-         "days_kept": 31,
+         "days_kept": 32,
          "rows_dropped": 44,
-         "rows_considered": 6803
+         "rows_considered": 7126
         }
        }
       },
@@ -946,8 +946,8 @@
      "provenance": {
       "grader_sha256": "43799ea4bab7f20e4608abe40cb0edb30efb3bb7fc50870e55f36c3e569836d2",
       "grading_protocol_seq": 118,
-      "code_commit": "e3e65a1967e7c7e79039784fde406bab8d3a73a0",
-      "registry_generated": "2026-09-29T19:01:04"
+      "code_commit": "aab64727e4653e5d064771b01c209d3f34c94c78",
+      "registry_generated": "2026-09-30T18:04:11"
      }
     },
     "calls_up": 0.47067125839778695,
@@ -959,29 +959,29 @@
    "family": "direction",
    "band": "|p-0.5|>=0.15",
    "claimed": null,
-   "live_n": 1090,
-   "live_acc": 0.48990825688073397,
+   "live_n": 1110,
+   "live_acc": 0.48558558558558557,
    "ci": null,
    "ci_method": "withheld",
-   "distinct_days": 36,
+   "distinct_days": 37,
    "design_effect": null,
    "effective_n": null,
-   "null_prequential": 0.6055045871559633,
-   "null_acc": 0.6055045871559633,
+   "null_prequential": 0.6063063063063063,
+   "null_acc": 0.6063063063063063,
    "null_method": "prequential-majority (walk-forward)",
    "null_ci": null,
-   "skill": -0.11559633027522936,
-   "verdict": "INSUFFICIENT DAYS (7/10 credible days of 36, 29 degenerate) \u2014 no interval, so no verdict",
+   "skill": -0.12072072072072076,
+   "verdict": "INSUFFICIENT DAYS (7/10 credible days of 37, 30 degenerate) \u2014 no interval, so no verdict",
    "retire": false,
    "breadth": {
-    "mean_daily_agreement": 0.6883390056697857,
+    "mean_daily_agreement": 0.691293104255941,
     "day_bet": {
-     "days": 36,
+     "days": 37,
      "correct": 19,
-     "accuracy": 0.5277777777777778,
+     "accuracy": 0.5135135135135135,
      "ci": [
-      0.23683883414644485,
-      0.8009975290306921
+      0.22945085773655188,
+      0.7891066614083613
      ]
     },
     "note": "DESCRIPTIVE, sets no verdict. mean_daily_agreement is the mean fraction of a day's calls pointing the same way; above ~0.8 the day is the honest unit and day_bet is the grade that framing supports. A high agreement with a large live_n means the row's evidence is the day count, not the row count."
@@ -991,10 +991,10 @@
    "settlement_filtered": true,
    "settlement_excluded": 38,
    "family_size": 18,
-   "looks": 69,
-   "divisor": 1242,
-   "corrected_alpha": 4.025764895330113e-05,
-   "ci_z": 4.10599597517396,
+   "looks": 70,
+   "divisor": 1260,
+   "corrected_alpha": 3.968253968253968e-05,
+   "ci_z": 4.109320282055597,
    "honesty": {
     "publishable": true,
     "one_sided": false,
@@ -1014,24 +1014,24 @@
      "band": "|p-0.5|>=0.15",
      "universe": "direction / |p-0.5|>=0.15",
      "evaluation": {
-      "graded_at": "2026-09-29T19:01:04",
-      "generated": "2026-09-29T19:01:04"
+      "graded_at": "2026-09-30T18:04:11",
+      "generated": "2026-09-30T18:04:11"
      },
      "counts": {
-      "rows": 1090,
-      "distinct_days": 36,
+      "rows": 1110,
+      "distinct_days": 37,
       "effective_n": null,
       "design_effect": null
      },
      "estimate": {
-      "point": 0.48990825688073397,
+      "point": 0.48558558558558557,
       "ci": null,
       "ci_method": "withheld",
-      "ci_z": 4.10599597517396,
-      "alpha": 4.025764895330113e-05
+      "ci_z": 4.109320282055597,
+      "alpha": 3.968253968253968e-05
      },
      "baseline": {
-      "value": 0.6055045871559633,
+      "value": 0.6063063063063063,
       "ci": null,
       "method": "prequential-majority (walk-forward)",
       "policy": "prequential-majority only: each day's constant guess is the majority class over days strictly before it. The hindsight null was retired after the dual-null transition cycle; the switchover regrade recorded zero verdict changes (audits/2026-07-27-null-transition.md).",
@@ -1046,13 +1046,13 @@
      "population_filters": {
       "settlement_quarantine": {
        "applied": true,
-       "rows_considered": 278125,
+       "rows_considered": 281155,
        "rows_excluded": 38,
        "rows_unsettled": 28,
        "rows_unverifiable": 10,
-       "excluded_fraction": 0.00013662921348314607,
-       "graded_observations_before": 16999,
-       "graded_observations_after": 16991,
+       "excluded_fraction": 0.00013515676406252778,
+       "graded_observations_before": 17621,
+       "graded_observations_after": 17613,
        "graded_observations_dropped": 8,
        "by_horizon": {
         "1d": {
@@ -1072,20 +1072,20 @@
          "graded_after": 683
         },
         "1w": {
-         "considered": 125193,
+         "considered": 126415,
          "unsettled": 7,
          "unverifiable": 0,
          "excluded": 7,
-         "graded_before": 7830,
-         "graded_after": 7830
+         "graded_before": 8129,
+         "graded_after": 8129
         },
         "1w#pm": {
-         "considered": 124596,
+         "considered": 126404,
          "unsettled": 7,
          "unverifiable": 0,
          "excluded": 7,
-         "graded_before": 7795,
-         "graded_after": 7795
+         "graded_before": 8118,
+         "graded_after": 8118
         }
        },
        "method": "structural, per row: resolved_at must be at or after the forward bar's true session close, where the base/target/forward bars are reconstructed exactly as PredictionResolver.Run selects them (daemon/internal/pipeline/predict.go). Session close is the bar stamp + 16h for stocks (ET midnight -> 16:00 ET) and + 24h for crypto. No timestamp cutoff and no basis_epoch: the deployed resolver still carries the defect, so the window is open.",
@@ -1110,16 +1110,16 @@
          "rows_considered": 603
         },
         "1w": {
-         "days_dropped": 9,
+         "days_dropped": 10,
          "days_kept": 32,
-         "rows_dropped": 37,
-         "rows_considered": 6838
+         "rows_dropped": 55,
+         "rows_considered": 7137
         },
         "1w#pm": {
          "days_dropped": 10,
-         "days_kept": 31,
+         "days_kept": 32,
          "rows_dropped": 44,
-         "rows_considered": 6803
+         "rows_considered": 7126
         }
        }
       },
@@ -1139,11 +1139,11 @@
      "provenance": {
       "grader_sha256": "43799ea4bab7f20e4608abe40cb0edb30efb3bb7fc50870e55f36c3e569836d2",
       "grading_protocol_seq": 118,
-      "code_commit": "e3e65a1967e7c7e79039784fde406bab8d3a73a0",
-      "registry_generated": "2026-09-29T19:01:04"
+      "code_commit": "aab64727e4653e5d064771b01c209d3f34c94c78",
+      "registry_generated": "2026-09-30T18:04:11"
      }
     },
-    "calls_up": 0.44145772155711166,
+    "calls_up": 0.44359308164403943,
     "source": "tools/selection_honesty.py"
    }
   },
@@ -1179,10 +1179,10 @@
    "design_effect": null,
    "effective_n": null,
    "family_size": 18,
-   "looks": 69,
-   "divisor": 1242,
-   "corrected_alpha": 4.025764895330113e-05,
-   "ci_z": 4.10599597517396
+   "looks": 70,
+   "divisor": 1260,
+   "corrected_alpha": 3.968253968253968e-05,
+   "ci_z": 4.109320282055597
   },
   {
    "predictor": "liquidity21",
@@ -1192,22 +1192,43 @@
    "claimed_source": "prereg chain",
    "claimed_spec_hash": "c3fe181e310987f2e868c948c6bc4a3ba50e5843ae1eeff823995fe5bcac5fa0",
    "claimed_registered_ts": 1785033037,
-   "claimed_db_avg": 0.7018080520380278,
-   "live_n": 9913,
-   "live_acc": 0.692323211943912,
+   "claimed_db_avg": 0.7017158865195068,
+   "live_n": 10756,
+   "live_acc": 0.6949609520267758,
    "ci": null,
    "null_prequential": null,
-   "null_acc": 0.7014025974025974,
+   "null_acc": 0.703763851738632,
    "null_method": "naive-persistence (frozen at call time, same resolver)",
-   "null_n": 9625,
-   "null_coverage": 0.9709472409966711,
+   "null_n": 10468,
+   "null_coverage": 0.973224246931945,
    "null_ci": null,
-   "skill": -0.009079385458685363,
+   "skill": -0.008802899711856216,
    "verdict": "INSUFFICIENT BLOCKS (2/10 non-overlapping horizon blocks) \u2014 no interval, so no verdict",
    "claim_verdict": "INSUFFICIENT BLOCKS (2/10 non-overlapping horizon blocks) \u2014 no interval, so no verdict",
    "note": "live-graded, interval resampled over non-overlapping horizon blocks",
-   "forecasts_recorded": 25981,
+   "forecasts_recorded": 26683,
    "survivorship_clean": true,
+   "ci_method": "withheld",
+   "distinct_days": 25,
+   "distinct_blocks": 2,
+   "block_span": 2,
+   "horizon_days": 21,
+   "design_effect": null,
+   "effective_n": null,
+   "family_size": 18,
+   "looks": 70,
+   "divisor": 1260,
+   "corrected_alpha": 3.968253968253968e-05,
+   "ci_z": 4.109320282055597
+  },
+  {
+   "predictor": "liquidity21#persist",
+   "family": "structure-benchmark",
+   "band": "all",
+   "claimed": null,
+   "live_n": 10468,
+   "live_acc": 0.703763851738632,
+   "ci": null,
    "ci_method": "withheld",
    "distinct_days": 24,
    "distinct_blocks": 2,
@@ -1215,40 +1236,19 @@
    "horizon_days": 21,
    "design_effect": null,
    "effective_n": null,
-   "family_size": 18,
-   "looks": 69,
-   "divisor": 1242,
-   "corrected_alpha": 4.025764895330113e-05,
-   "ci_z": 4.10599597517396
-  },
-  {
-   "predictor": "liquidity21#persist",
-   "family": "structure-benchmark",
-   "band": "all",
-   "claimed": null,
-   "live_n": 9625,
-   "live_acc": 0.7014025974025974,
-   "ci": null,
-   "ci_method": "withheld",
-   "distinct_days": 23,
-   "distinct_blocks": 2,
-   "block_span": 2,
-   "horizon_days": 21,
-   "design_effect": null,
-   "effective_n": null,
    "null_prequential": null,
    "null_acc": null,
-   "null_coverage": 0.9709472409966711,
+   "null_coverage": 0.973224246931945,
    "skill": null,
    "verdict": "BENCHMARK \u2014 the frozen naive-persistence null itself",
    "note": "\"nothing changes\" guess frozen at call time and graded by the same resolver as the call; never recomputed afterwards",
    "retire": false,
    "survivorship_clean": true,
    "family_size": 18,
-   "looks": 69,
-   "divisor": 1242,
-   "corrected_alpha": 4.025764895330113e-05,
-   "ci_z": 4.10599597517396
+   "looks": 70,
+   "divisor": 1260,
+   "corrected_alpha": 3.968253968253968e-05,
+   "ci_z": 4.109320282055597
   },
   {
    "predictor": "liquidity21-crypto",
@@ -1258,7 +1258,7 @@
    "claimed_source": "prereg chain",
    "claimed_spec_hash": "d00c06f703d06c23488b1dc12fd890bc6ac0b4e24f78ffa6539f97123ca7ad93",
    "claimed_registered_ts": 1785033037,
-   "claimed_db_avg": 0.9224349881796691,
+   "claimed_db_avg": 0.9227599067599067,
    "live_n": 226,
    "live_acc": 0.49557522123893805,
    "ci": null,
@@ -1272,7 +1272,7 @@
    "verdict": "INSUFFICIENT BLOCKS (2/10 non-overlapping horizon blocks) \u2014 no interval, so no verdict",
    "claim_verdict": "INSUFFICIENT BLOCKS (2/10 non-overlapping horizon blocks) \u2014 no interval, so no verdict",
    "note": "live-graded, interval resampled over non-overlapping horizon blocks",
-   "forecasts_recorded": 423,
+   "forecasts_recorded": 429,
    "survivorship_clean": true,
    "ci_method": "withheld",
    "distinct_days": 34,
@@ -1282,10 +1282,10 @@
    "design_effect": null,
    "effective_n": null,
    "family_size": 18,
-   "looks": 69,
-   "divisor": 1242,
-   "corrected_alpha": 4.025764895330113e-05,
-   "ci_z": 4.10599597517396
+   "looks": 70,
+   "divisor": 1260,
+   "corrected_alpha": 3.968253968253968e-05,
+   "ci_z": 4.109320282055597
   },
   {
    "predictor": "liquidity21-crypto#persist",
@@ -1311,10 +1311,10 @@
    "retire": false,
    "survivorship_clean": true,
    "family_size": 18,
-   "looks": 69,
-   "divisor": 1242,
-   "corrected_alpha": 4.025764895330113e-05,
-   "ci_z": 4.10599597517396
+   "looks": 70,
+   "divisor": 1260,
+   "corrected_alpha": 3.968253968253968e-05,
+   "ci_z": 4.109320282055597
   },
   {
    "predictor": "trend21",
@@ -1324,22 +1324,43 @@
    "claimed_source": "prereg chain",
    "claimed_spec_hash": "38bc8fba7bd8a7ceceac9f495c5a07fc2931b9f7d8997a4b11dbb81e5dae9410",
    "claimed_registered_ts": 1785054122,
-   "claimed_db_avg": 0.8123354819024372,
-   "live_n": 9973,
-   "live_acc": 0.7856211771783816,
+   "claimed_db_avg": 0.8124844208415345,
+   "live_n": 10823,
+   "live_acc": 0.7839785641688995,
    "ci": null,
    "null_prequential": null,
-   "null_acc": 0.7891423263494685,
+   "null_acc": 0.7874561153809659,
    "null_method": "naive-persistence (frozen at call time, same resolver)",
-   "null_n": 9689,
-   "null_coverage": 0.9715231124034894,
+   "null_n": 10539,
+   "null_coverage": 0.9737595860667098,
    "null_ci": null,
-   "skill": -0.0035211491710868126,
+   "skill": -0.0034775512120663876,
    "verdict": "INSUFFICIENT BLOCKS (2/10 non-overlapping horizon blocks) \u2014 no interval, so no verdict",
    "claim_verdict": "INSUFFICIENT BLOCKS (2/10 non-overlapping horizon blocks) \u2014 no interval, so no verdict",
    "note": "live-graded, interval resampled over non-overlapping horizon blocks",
-   "forecasts_recorded": 26219,
+   "forecasts_recorded": 26927,
    "survivorship_clean": true,
+   "ci_method": "withheld",
+   "distinct_days": 25,
+   "distinct_blocks": 2,
+   "block_span": 2,
+   "horizon_days": 21,
+   "design_effect": null,
+   "effective_n": null,
+   "family_size": 18,
+   "looks": 70,
+   "divisor": 1260,
+   "corrected_alpha": 3.968253968253968e-05,
+   "ci_z": 4.109320282055597
+  },
+  {
+   "predictor": "trend21#persist",
+   "family": "structure-benchmark",
+   "band": "all",
+   "claimed": null,
+   "live_n": 10539,
+   "live_acc": 0.7874561153809659,
+   "ci": null,
    "ci_method": "withheld",
    "distinct_days": 24,
    "distinct_blocks": 2,
@@ -1347,40 +1368,19 @@
    "horizon_days": 21,
    "design_effect": null,
    "effective_n": null,
-   "family_size": 18,
-   "looks": 69,
-   "divisor": 1242,
-   "corrected_alpha": 4.025764895330113e-05,
-   "ci_z": 4.10599597517396
-  },
-  {
-   "predictor": "trend21#persist",
-   "family": "structure-benchmark",
-   "band": "all",
-   "claimed": null,
-   "live_n": 9689,
-   "live_acc": 0.7891423263494685,
-   "ci": null,
-   "ci_method": "withheld",
-   "distinct_days": 23,
-   "distinct_blocks": 2,
-   "block_span": 2,
-   "horizon_days": 21,
-   "design_effect": null,
-   "effective_n": null,
    "null_prequential": null,
    "null_acc": null,
-   "null_coverage": 0.9715231124034894,
+   "null_coverage": 0.9737595860667098,
    "skill": null,
    "verdict": "BENCHMARK \u2014 the frozen naive-persistence null itself",
    "note": "\"nothing changes\" guess frozen at call time and graded by the same resolver as the call; never recomputed afterwards",
    "retire": false,
    "survivorship_clean": true,
    "family_size": 18,
-   "looks": 69,
-   "divisor": 1242,
-   "corrected_alpha": 4.025764895330113e-05,
-   "ci_z": 4.10599597517396
+   "looks": 70,
+   "divisor": 1260,
+   "corrected_alpha": 3.968253968253968e-05,
+   "ci_z": 4.109320282055597
   },
   {
    "predictor": "trend21-crypto",
@@ -1390,7 +1390,7 @@
    "claimed_source": "prereg chain",
    "claimed_spec_hash": "c23471708e5e73643f89bf586fd2118efb1526053145034333c89bf2dd3a0d4e",
    "claimed_registered_ts": 1785033037,
-   "claimed_db_avg": 0.9449716312056738,
+   "claimed_db_avg": 0.9451748251748252,
    "live_n": 226,
    "live_acc": 0.504424778761062,
    "ci": null,
@@ -1404,7 +1404,7 @@
    "verdict": "INSUFFICIENT BLOCKS (2/10 non-overlapping horizon blocks) \u2014 no interval, so no verdict",
    "claim_verdict": "INSUFFICIENT BLOCKS (2/10 non-overlapping horizon blocks) \u2014 no interval, so no verdict",
    "note": "live-graded, interval resampled over non-overlapping horizon blocks",
-   "forecasts_recorded": 423,
+   "forecasts_recorded": 429,
    "survivorship_clean": true,
    "ci_method": "withheld",
    "distinct_days": 34,
@@ -1414,10 +1414,10 @@
    "design_effect": null,
    "effective_n": null,
    "family_size": 18,
-   "looks": 69,
-   "divisor": 1242,
-   "corrected_alpha": 4.025764895330113e-05,
-   "ci_z": 4.10599597517396
+   "looks": 70,
+   "divisor": 1260,
+   "corrected_alpha": 3.968253968253968e-05,
+   "ci_z": 4.109320282055597
   },
   {
    "predictor": "trend21-crypto#persist",
@@ -1443,10 +1443,10 @@
    "retire": false,
    "survivorship_clean": true,
    "family_size": 18,
-   "looks": 69,
-   "divisor": 1242,
-   "corrected_alpha": 4.025764895330113e-05,
-   "ci_z": 4.10599597517396
+   "looks": 70,
+   "divisor": 1260,
+   "corrected_alpha": 3.968253968253968e-05,
+   "ci_z": 4.109320282055597
   },
   {
    "predictor": "trend63",
@@ -1456,7 +1456,7 @@
    "claimed_source": "prereg chain",
    "claimed_spec_hash": "8400fc258784e86f6b8cfa85d8a81ac636eafd4157b83832c25a717c2c34a7da",
    "claimed_registered_ts": 1785033037,
-   "claimed_db_avg": 0.7411390213204164,
+   "claimed_db_avg": 0.7412319976232035,
    "live_n": 0,
    "live_acc": null,
    "ci": null,
@@ -1470,17 +1470,17 @@
    "verdict": "PENDING (first grade 2026-09-25, 0/30 resolved)",
    "claim_verdict": null,
    "note": "claim is backtested, not yet a live record",
-   "forecasts_recorded": 26219,
+   "forecasts_recorded": 26927,
    "survivorship_clean": true,
    "distinct_days": 0,
    "distinct_blocks": 0,
    "block_span": 0,
    "horizon_days": 63,
    "family_size": 18,
-   "looks": 69,
-   "divisor": 1242,
-   "corrected_alpha": 4.025764895330113e-05,
-   "ci_z": 4.10599597517396
+   "looks": 70,
+   "divisor": 1260,
+   "corrected_alpha": 3.968253968253968e-05,
+   "ci_z": 4.109320282055597
   },
   {
    "predictor": "vol21",
@@ -1490,22 +1490,43 @@
    "claimed_source": "prereg chain",
    "claimed_spec_hash": "a9a32f3148314309b99a7787e5e70b5271e051e62a75e9c2b7ed6cc6df60d75e",
    "claimed_registered_ts": 1785033037,
-   "claimed_db_avg": 0.6135141204232322,
-   "live_n": 9985,
-   "live_acc": 0.4891337005508262,
+   "claimed_db_avg": 0.6137239206966834,
+   "live_n": 10837,
+   "live_acc": 0.4885115806957645,
    "ci": null,
    "null_prequential": null,
-   "null_acc": 0.46379203631112026,
+   "null_acc": 0.46614830267399965,
    "null_method": "naive-persistence (frozen at call time, same resolver)",
-   "null_n": 9694,
-   "null_coverage": 0.97085628442664,
+   "null_n": 10546,
+   "null_coverage": 0.9731475500599797,
    "null_ci": null,
-   "skill": 0.025341664239705963,
+   "skill": 0.022363278021764854,
    "verdict": "INSUFFICIENT BLOCKS (2/10 non-overlapping horizon blocks) \u2014 no interval, so no verdict",
    "claim_verdict": "INSUFFICIENT BLOCKS (2/10 non-overlapping horizon blocks) \u2014 no interval, so no verdict",
    "note": "live-graded, interval resampled over non-overlapping horizon blocks",
-   "forecasts_recorded": 26274,
+   "forecasts_recorded": 26985,
    "survivorship_clean": true,
+   "ci_method": "withheld",
+   "distinct_days": 24,
+   "distinct_blocks": 2,
+   "block_span": 2,
+   "horizon_days": 21,
+   "design_effect": null,
+   "effective_n": null,
+   "family_size": 18,
+   "looks": 70,
+   "divisor": 1260,
+   "corrected_alpha": 3.968253968253968e-05,
+   "ci_z": 4.109320282055597
+  },
+  {
+   "predictor": "vol21#persist",
+   "family": "structure-benchmark",
+   "band": "all",
+   "claimed": null,
+   "live_n": 10546,
+   "live_acc": 0.46614830267399965,
+   "ci": null,
    "ci_method": "withheld",
    "distinct_days": 23,
    "distinct_blocks": 2,
@@ -1513,40 +1534,19 @@
    "horizon_days": 21,
    "design_effect": null,
    "effective_n": null,
-   "family_size": 18,
-   "looks": 69,
-   "divisor": 1242,
-   "corrected_alpha": 4.025764895330113e-05,
-   "ci_z": 4.10599597517396
-  },
-  {
-   "predictor": "vol21#persist",
-   "family": "structure-benchmark",
-   "band": "all",
-   "claimed": null,
-   "live_n": 9694,
-   "live_acc": 0.46379203631112026,
-   "ci": null,
-   "ci_method": "withheld",
-   "distinct_days": 22,
-   "distinct_blocks": 2,
-   "block_span": 2,
-   "horizon_days": 21,
-   "design_effect": null,
-   "effective_n": null,
    "null_prequential": null,
    "null_acc": null,
-   "null_coverage": 0.97085628442664,
+   "null_coverage": 0.9731475500599797,
    "skill": null,
    "verdict": "BENCHMARK \u2014 the frozen naive-persistence null itself",
    "note": "\"nothing changes\" guess frozen at call time and graded by the same resolver as the call; never recomputed afterwards",
    "retire": false,
    "survivorship_clean": true,
    "family_size": 18,
-   "looks": 69,
-   "divisor": 1242,
-   "corrected_alpha": 4.025764895330113e-05,
-   "ci_z": 4.10599597517396
+   "looks": 70,
+   "divisor": 1260,
+   "corrected_alpha": 3.968253968253968e-05,
+   "ci_z": 4.109320282055597
   }
  ]
 }
