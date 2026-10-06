@@ -1,0 +1,7 @@
+signaldeck-statement v1
+utc 2026-10-06T02:30:04Z
+ledger-head seq=671794 head=b703ac4f166be57e1e0754e795e9a2d1a3f52f03a2305e0bce60801ba2c2599e intact=true
+anchor SIGNALDECK-LEDGER-ANCHOR v1 seq=670084 count=670084 ts=1791245404 digest=9a3ba2a96a251ccdeea18ffbb71f8d195cadce4bef3d508ff2201ee159414017
+prereg seq=144 head=4b5b90973aa27e9258ef31655608da50c5bdfe31544f932aef7f13fa4402b70c
+registry-sha256 6d048282b677e02134b4e9ef3c0e0aea9fef8cbb9d14c4f547eb8eea0f57ecd1
+prereg-doc-sha256 d819a17815117c99ca5bc70e869c4118962ca66573ede38d150977317269cb28
